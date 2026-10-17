@@ -1,0 +1,61 @@
+{
+  "title": "The Fun Drawer",
+  "cleanup": {
+    "1": "Quick wipe (2 min) 🧻",
+    "2": "Some mess: towels + 10 min 🧽",
+    "3": "Big mess: hose or bath after 🛁"
+  },
+  "categories": [
+    {
+      "id": "spray-bottle",
+      "name": "Spray Bottle",
+      "emoji": "💦",
+      "image": "img/spray-bottle.svg",
+      "color": "#2BA8F5",
+      "tagline": "A cheap kitchen squirter = BIG fun",
+      "intro": "The plain **$1 kitchen spray bottle** 🧴\n\n💧 Fill it with **water only**.\n🚫 Never use a bottle that held cleaner.\n🏷️ Label it **WATER ONLY** (use the label maker!)",
+      "activities": [
+        { "id": "rainbow-maker", "name": "Rainbow Maker", "emoji": "🌈", "minutes": 10, "cleanup": 1, "ages": "3+", "where": "☀️ Outside" },
+        { "id": "target-range", "name": "Squirt Target Range", "emoji": "🎯", "minutes": 20, "cleanup": 1, "ages": "4+", "where": "🌳 Outside" },
+        { "id": "chalk-paint", "name": "Chalk Paint Magic", "emoji": "🎨", "minutes": 30, "cleanup": 2, "ages": "3+", "where": "🛝 Sidewalk" },
+        { "id": "coffee-filter-butterflies", "name": "Coffee Filter Butterflies", "emoji": "🦋", "minutes": 25, "cleanup": 2, "ages": "4+", "where": "🍽️ Table" },
+        { "id": "spray-boat-race", "name": "Spray Boat Race", "emoji": "⛵", "minutes": 15, "cleanup": 2, "ages": "4+", "where": "🛁 Tub, table or yard" },
+        { "id": "plant-mist-patrol", "name": "Plant Mist Patrol", "emoji": "🪴", "minutes": 10, "time": "10 min / day", "cleanup": 1, "ages": "3+", "where": "🏠 Indoors" }
+      ]
+    },
+    {
+      "id": "label-maker",
+      "name": "Label Maker",
+      "emoji": "🏷️",
+      "image": "img/label-maker.svg",
+      "color": "#8B7BF7",
+      "tagline": "One magic silver tape. Make it count! ✨",
+      "intro": "We have a whole stack of tapes 📚\n…but only **ONE** is the real **✨ Magic Silver Tape ✨**\n\n### 🪄 The Silver Rule\n1. ✏️ **Practice first** on paper or masking tape\n2. 🔤 **Check spelling** with a grown-up\n3. 🖨️ **Print ONCE** on silver. Make it count!",
+      "activities": [
+        { "id": "toy-museum", "name": "The Toy Museum", "emoji": "🏛️", "minutes": 30, "cleanup": 1, "ages": "4+", "where": "🛏️ Your room" },
+        { "id": "label-treasure-hunt", "name": "Label Treasure Hunt", "emoji": "🗺️", "minutes": 25, "cleanup": 1, "ages": "5+", "where": "🏠 All over" },
+        { "id": "silver-tape-award", "name": "The Silver Tape Award", "emoji": "🏆", "minutes": 15, "cleanup": 1, "ages": "3+", "where": "🛋️ Family time" },
+        { "id": "word-builder-labels", "name": "Label the House", "emoji": "🔤", "minutes": 20, "cleanup": 1, "ages": "4+", "where": "🏠 All over" },
+        { "id": "secret-code-labels", "name": "Secret Code Labels", "emoji": "🕵️", "minutes": 20, "cleanup": 1, "ages": "6+", "where": "✏️ Table" },
+        { "id": "pantry-patrol", "name": "Pantry Patrol", "emoji": "🥫", "minutes": 20, "cleanup": 2, "ages": "5+", "where": "🍳 Kitchen" }
+      ]
+    },
+    {
+      "id": "four-color-pen",
+      "name": "4-Color Pen",
+      "emoji": "🖊️",
+      "image": "img/four-color-pen.svg",
+      "color": "#FF5C5C",
+      "tagline": "Click! Four colors in one pen",
+      "intro": "⚫ Black · 🔵 Blue · 🔴 Red · 🟢 Green\n\n👇 Push a slider down = that color comes out.\n🔁 Push another one = **click!** New color.",
+      "activities": [
+        { "id": "make-a-map", "name": "Make-a-Map", "emoji": "🗺️", "minutes": 25, "cleanup": 1, "ages": "5+", "where": "✏️ Table" },
+        { "id": "color-story", "name": "Four-Color Story", "emoji": "📚", "minutes": 20, "cleanup": 1, "ages": "5+", "where": "🛋️ Anywhere" },
+        { "id": "dots-and-boxes", "name": "4-Player Dots & Boxes", "emoji": "🔲", "minutes": 15, "cleanup": 1, "ages": "5+", "where": "✏️ Table" },
+        { "id": "doodle-patterns", "name": "Rainbow Ripple Doodles", "emoji": "🌀", "minutes": 15, "cleanup": 1, "ages": "4+", "where": "✏️ Anywhere" },
+        { "id": "pixel-art", "name": "Pixel Art Grid", "emoji": "🟥", "minutes": 20, "cleanup": 1, "ages": "4+", "where": "✏️ Table" },
+        { "id": "four-panel-comic", "name": "Four-Panel Comic", "emoji": "🦸", "minutes": 30, "cleanup": 1, "ages": "6+", "where": "✏️ Table" }
+      ]
+    }
+  ]
+}

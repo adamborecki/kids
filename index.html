@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Fun Drawer</title>
+  <meta name="description" content="Picture-first activities for kids using everyday stuff: a spray bottle, a label maker, and a 4-color pen.">
+  <meta name="theme-color" content="#FFF6E9">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🗄️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <style id="page-size">@page { size: letter; margin: 0.6in; }</style>
+</head>
+<body>
+  <header class="topbar no-print">
+    <a href="#/" class="brand"><span aria-hidden="true">🗄️</span> The Fun Drawer</a>
+    <div class="paper" role="group" aria-label="Print paper size">
+      <span aria-hidden="true">🖨️</span>
+      <button type="button" data-paper="letter">Letter</button>
+      <button type="button" data-paper="a4">A4</button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <p class="loading">Opening the drawer… 🗄️</p>
+  </main>
+
+  <footer class="site-foot no-print">
+    <p>🧽 <b>Cleanup:</b> <span class="cash"><b>$</b><i>$$</i></span> quick wipe · <span class="cash"><b>$$</b><i>$</i></span> towels + 10 min · <span class="cash"><b>$$$</b></span> hose or bath</p>
+    <p>🖐️ Made for little hands. Grown-ups: read the 🛟 notes first.</p>
+  </footer>
+
+  <script src="js/vendor/marked.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
