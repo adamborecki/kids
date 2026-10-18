@@ -4,9 +4,11 @@ Picture-first activities for kids, built from stuff in the kitchen drawer:
 
 | | Thing | Activities |
 |---|---|---|
-| 💦 | **Spray bottle** (the cheap $1 kind) | Rainbow Maker · Target Range · Chalk Paint · Coffee Filter Butterflies · Boat Race · Plant Mist Patrol |
-| 🏷️ | **Label maker** + one ✨ Magic Silver Tape | Toy Museum · Treasure Hunt · Silver Tape Award · Label the House · Secret Codes · Pantry Patrol |
-| 🖊️ | **4-color pen** | Make-a-Map · Color Story · Dots & Boxes · Ripple Doodles · Pixel Art · Four-Panel Comic |
+| 💦 | **Spray bottle** (the cheap $1 kind) | 25 — rainbows, ice rescue, tie-dye, spiderweb hunt, evaporation lab… |
+| 🏷️ | **Label maker** + one ✨ Magic Silver Tape | 25 — toy museum, mystery powder lab, home library, family vote… |
+| 🖊️ | **4-color pen** | 25 — pixel art, Sprouts, Morse code, flip books, dream house plans… |
+
+**75 activities** in all. The full list lives in `catalog.json`.
 
 ## 🏷️ Badges + 🔎 filters
 Every activity card shows badges. The home page and each category page have a filter panel (live counts on every chip; filters are remembered).

@@ -402,11 +402,11 @@
     // Make checklists tappable, mark fill-in tables, let wide tables scroll on phones.
     app.querySelectorAll('input[type="checkbox"]').forEach((c) => { c.disabled = false; });
     app.querySelectorAll(".section table").forEach((t) => {
-      // A wide table that's empty except for row labels = drawing grid (pixel art).
+      // A wide table that's (almost) all blank = drawing grid (pixel art, mazes, floor plans).
       const cells = [...t.querySelectorAll("tbody td")];
       const cols = t.querySelectorAll("thead th").length;
       const blank = (td) => !td.textContent.trim();
-      if (cols >= 6 && cells.every((td) => td.cellIndex === 0 || blank(td))) t.classList.add("grid-table");
+      if (cols >= 6 && cells.filter(blank).length >= cells.length * 0.8) t.classList.add("grid-table");
       else if (cells.some(blank)) t.classList.add("fill");
       const wrap = document.createElement("div");
       wrap.className = "table-wrap";

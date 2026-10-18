@@ -24,7 +24,26 @@
         { "id": "chalk-paint", "name": "Chalk Paint Magic", "emoji": "🎨", "minutes": 40, "cleanup": 2, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
         { "id": "coffee-filter-butterflies", "name": "Coffee Filter Butterflies", "emoji": "🦋", "minutes": 30, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
         { "id": "spray-boat-race", "name": "Spray Boat Race", "emoji": "⛵", "minutes": 30, "cleanup": 2, "noise": 2, "where": ["indoor", "outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
-        { "id": "plant-mist-patrol", "name": "Plant Mist Patrol", "emoji": "🪴", "minutes": 10, "time": "10 min / day", "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] }
+        { "id": "plant-mist-patrol", "name": "Plant Mist Patrol", "emoji": "🪴", "minutes": 10, "time": "10 min / day", "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "water-writing", "name": "Water Writing Wall", "emoji": "✍️", "minutes": 15, "cleanup": 0, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 9] },
+        { "id": "ice-rescue", "name": "Ice Rescue", "emoji": "🧊", "minutes": 30, "cleanup": 2, "noise": 1, "where": ["indoor", "outdoor"], "players": ["solo", "group"], "ages": [6, 9] },
+        { "id": "firefighter-drill", "name": "Firefighter Drill", "emoji": "🚒", "minutes": 25, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["group"], "ages": [6, 8] },
+        { "id": "rain-cloud-jar", "name": "Rain Cloud in a Jar", "emoji": "🌧️", "minutes": 15, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 9] },
+        { "id": "bike-wash", "name": "Bike & Scooter Wash", "emoji": "🚲", "minutes": 40, "cleanup": 3, "noise": 2, "where": ["outdoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "leaf-stencil", "name": "Leaf Stencil Spray Art", "emoji": "🍃", "minutes": 30, "cleanup": 3, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "snow-painting", "name": "Snow Painting", "emoji": "❄️", "minutes": 20, "cleanup": 1, "noise": 2, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 10] },
+        { "id": "evaporation-race", "name": "Evaporation Race", "emoji": "🏁", "minutes": 30, "cleanup": 0, "noise": 0, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [8, 11] },
+        { "id": "sprinkle-tag", "name": "Sprinkle Tag", "emoji": "🏃", "minutes": 20, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["group"], "ages": [6, 10] },
+        { "id": "sponge-garden", "name": "Sponge Seed Garden", "emoji": "🌱", "minutes": 10, "time": "10 min / day", "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "spiderweb-hunt", "name": "Spiderweb Hunt", "emoji": "🕸️", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "tie-dye", "name": "Spray Tie-Dye Shirt", "emoji": "👕", "minutes": 60, "time": "60 min + 1 day", "cleanup": 3, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [8, 11] },
+        { "id": "tissue-window", "name": "Stained-Glass Window", "emoji": "🪟", "minutes": 25, "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 9] },
+        { "id": "drop-magnifier", "name": "Water Drop Magnifier", "emoji": "🔍", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "cooling-lab", "name": "Cool-Down Lab", "emoji": "🌡️", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["indoor", "outdoor"], "players": ["solo", "group"], "ages": [8, 11] },
+        { "id": "critter-safari", "name": "Garden Critter Safari", "emoji": "🐌", "minutes": 30, "cleanup": 1, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 10] },
+        { "id": "ping-pong-push", "name": "Ping-Pong Push Race", "emoji": "🏓", "minutes": 15, "cleanup": 1, "noise": 2, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [6, 9] },
+        { "id": "crayon-resist", "name": "Secret Crayon Pictures", "emoji": "🕵️", "minutes": 20, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 9] },
+        { "id": "float-the-ball", "name": "Float-the-Ball Relay", "emoji": "🥤", "minutes": 20, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["group"], "ages": [6, 11] }
       ]
     },
     {
@@ -41,7 +60,26 @@
         { "id": "silver-tape-award", "name": "The Silver Tape Award", "emoji": "🏆", "minutes": 20, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [6, 11] },
         { "id": "word-builder-labels", "name": "Label the House", "emoji": "🔤", "minutes": 20, "cleanup": 1, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
         { "id": "secret-code-labels", "name": "Secret Code Labels", "emoji": "🕵️", "minutes": 25, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
-        { "id": "pantry-patrol", "name": "Pantry Patrol", "emoji": "🥫", "minutes": 45, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] }
+        { "id": "pantry-patrol", "name": "Pantry Patrol", "emoji": "🥫", "minutes": 45, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "lunchbox-notes", "name": "Lunchbox Notes", "emoji": "🍱", "minutes": 10, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "home-library", "name": "Home Library", "emoji": "📚", "minutes": 60, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "toy-bin-sort", "name": "Toy Bin Makeover", "emoji": "🧸", "minutes": 30, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 10] },
+        { "id": "door-signs", "name": "Door Sign Maker", "emoji": "🚪", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "mystery-powders", "name": "Mystery Powder Lab", "emoji": "🧪", "minutes": 30, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "measure-everything", "name": "Measure Everything", "emoji": "📏", "minutes": 25, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "family-vote", "name": "Family Vote Booth", "emoji": "🗳️", "minutes": 20, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "pretend-store", "name": "Pretend Store", "emoji": "🏪", "minutes": 45, "cleanup": 2, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [6, 10] },
+        { "id": "garden-markers", "name": "Garden Markers", "emoji": "🪴", "minutes": 20, "cleanup": 1, "noise": 0, "where": ["outdoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "chore-chart", "name": "Chore Chart Builder", "emoji": "✅", "minutes": 30, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "rhyme-time", "name": "Rhyme Time Labels", "emoji": "🎵", "minutes": 15, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 8] },
+        { "id": "math-hunt", "name": "Math Fact Hunt", "emoji": "🧮", "minutes": 20, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 10] },
+        { "id": "gift-wrap", "name": "Gift Wrap Studio", "emoji": "🎁", "minutes": 30, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "time-capsule", "name": "Time Capsule", "emoji": "⏳", "minutes": 45, "cleanup": 1, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "compass-room", "name": "Compass Room", "emoji": "🧭", "minutes": 15, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [7, 11] },
+        { "id": "name-that-sound", "name": "Name That Sound", "emoji": "🎵", "minutes": 20, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [6, 9] },
+        { "id": "recipe-cards", "name": "Recipe Card Chef", "emoji": "🍳", "minutes": 30, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "pet-station", "name": "Pet Care Station", "emoji": "🐾", "minutes": 20, "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "obstacle-course", "name": "Obstacle Course Signs", "emoji": "🏁", "minutes": 40, "cleanup": 2, "noise": 3, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [6, 10] }
       ]
     },
     {
@@ -58,7 +96,26 @@
         { "id": "dots-and-boxes", "name": "4-Player Dots & Boxes", "emoji": "🔲", "minutes": 15, "cleanup": 0, "noise": 1, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [6, 11] },
         { "id": "doodle-patterns", "name": "Rainbow Ripple Doodles", "emoji": "🌀", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [6, 11] },
         { "id": "pixel-art", "name": "Pixel Art Grid", "emoji": "🟥", "minutes": 25, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
-        { "id": "four-panel-comic", "name": "Four-Panel Comic", "emoji": "🦸", "minutes": 40, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] }
+        { "id": "four-panel-comic", "name": "Four-Panel Comic", "emoji": "🦸", "minutes": 40, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "sprouts", "name": "Sprouts", "emoji": "🌱", "minutes": 10, "cleanup": 0, "noise": 1, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [7, 11] },
+        { "id": "rainbow-writing", "name": "Rainbow Writing", "emoji": "✍️", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "memory-grid", "name": "Memory Grid", "emoji": "🧠", "minutes": 15, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "color-code-week", "name": "Color-Code My Week", "emoji": "🗓️", "minutes": 20, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [9, 11] },
+        { "id": "color-by-number", "name": "Make a Color-by-Number", "emoji": "🔢", "minutes": 30, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 10] },
+        { "id": "survey-graph", "name": "Family Survey + Graph", "emoji": "📊", "minutes": 25, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [7, 11] },
+        { "id": "squiggle-game", "name": "The Squiggle Game", "emoji": "〰️", "minutes": 15, "cleanup": 0, "noise": 1, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "proofreading-detective", "name": "Proofreading Detective", "emoji": "🕵️", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [8, 11] },
+        { "id": "maze-maker", "name": "Maze Maker", "emoji": "🌀", "minutes": 25, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "card-game", "name": "Make Your Own Card Game", "emoji": "🃏", "minutes": 40, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [7, 11] },
+        { "id": "family-tree", "name": "Family Tree", "emoji": "🌳", "minutes": 30, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "feelings-journal", "name": "Four-Color Feelings Journal", "emoji": "📓", "minutes": 10, "time": "10 min / day", "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "times-table-patterns", "name": "Times Table Patterns", "emoji": "✖️", "minutes": 25, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [8, 11] },
+        { "id": "dream-house", "name": "Dream House Floor Plan", "emoji": "🏠", "minutes": 45, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [9, 11] },
+        { "id": "nature-sketchbook", "name": "Nature Sketchbook", "emoji": "🐛", "minutes": 30, "cleanup": 0, "noise": 0, "where": ["outdoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "morse-code", "name": "Morse Code Messages", "emoji": "📡", "minutes": 20, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [8, 11] },
+        { "id": "flip-book", "name": "Sticky Note Flip Book", "emoji": "🎞️", "minutes": 40, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [8, 11] },
+        { "id": "hand-illusion", "name": "3D Hand Illusion", "emoji": "✋", "minutes": 20, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "speed-sketch", "name": "Speed Sketch Showdown", "emoji": "📢", "minutes": 20, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [6, 11] }
       ]
     }
   ]
