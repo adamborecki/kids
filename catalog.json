@@ -1,0 +1,65 @@
+{
+  "title": "The Fun Drawer",
+  "scales": {
+    "time": {"short": 15, "medium": 30},
+    "timeLabels": {"short": "⚡ Short", "medium": "⏳ Medium", "long": "🕰️ Long"},
+    "cleanup": ["✨ No cleanup", "🧻 Light cleanup", "🧽 Medium cleanup", "🛁 Big cleanup"],
+    "noise": ["🤫 Silent", "🔉 Quiet", "🔊 Not as quiet", "📢 Unusually loud"],
+    "where": {"indoor": "🏠 Indoor", "outdoor": "🌳 Outdoor"},
+    "players": {"solo": "👤 Solo", "group": "👥 Group"},
+    "ages": [6, 7, 8, 9, 10, 11]
+  },
+  "categories": [
+    {
+      "id": "spray-bottle",
+      "name": "Spray Bottle",
+      "emoji": "💦",
+      "image": "img/spray-bottle.svg",
+      "color": "#2BA8F5",
+      "tagline": "A cheap kitchen squirter = BIG fun",
+      "intro": "The plain **$1 kitchen spray bottle** 🧴\n\n💧 Fill it with **water only**.\n🚫 Never use a bottle that held cleaner.\n🏷️ Label it **WATER ONLY** (use the label maker!)",
+      "activities": [
+        { "id": "rainbow-maker", "name": "Rainbow Maker", "emoji": "🌈", "minutes": 10, "cleanup": 0, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "target-range", "name": "Squirt Target Range", "emoji": "🎯", "minutes": 25, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "chalk-paint", "name": "Chalk Paint Magic", "emoji": "🎨", "minutes": 40, "cleanup": 2, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "coffee-filter-butterflies", "name": "Coffee Filter Butterflies", "emoji": "🦋", "minutes": 30, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "spray-boat-race", "name": "Spray Boat Race", "emoji": "⛵", "minutes": 30, "cleanup": 2, "noise": 2, "where": ["indoor", "outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "plant-mist-patrol", "name": "Plant Mist Patrol", "emoji": "🪴", "minutes": 10, "time": "10 min / day", "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] }
+      ]
+    },
+    {
+      "id": "label-maker",
+      "name": "Label Maker",
+      "emoji": "🏷️",
+      "image": "img/label-maker.svg",
+      "color": "#8B7BF7",
+      "tagline": "One magic silver tape. Make it count! ✨",
+      "intro": "We have a whole stack of tapes 📚\n…but only **ONE** is the real **✨ Magic Silver Tape ✨**\n\n### 🪄 The Silver Rule\n1. ✏️ **Practice first** on paper or masking tape\n2. 🔤 **Check spelling** with a grown-up\n3. 🖨️ **Print ONCE** on silver. Make it count!",
+      "activities": [
+        { "id": "toy-museum", "name": "The Toy Museum", "emoji": "🏛️", "minutes": 45, "cleanup": 1, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "label-treasure-hunt", "name": "Label Treasure Hunt", "emoji": "🗺️", "minutes": 40, "cleanup": 1, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "silver-tape-award", "name": "The Silver Tape Award", "emoji": "🏆", "minutes": 20, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "word-builder-labels", "name": "Label the House", "emoji": "🔤", "minutes": 20, "cleanup": 1, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "secret-code-labels", "name": "Secret Code Labels", "emoji": "🕵️", "minutes": 25, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "pantry-patrol", "name": "Pantry Patrol", "emoji": "🥫", "minutes": 45, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] }
+      ]
+    },
+    {
+      "id": "four-color-pen",
+      "name": "4-Color Pen",
+      "emoji": "🖊️",
+      "image": "img/four-color-pen.svg",
+      "color": "#FF5C5C",
+      "tagline": "Click! Four colors in one pen",
+      "intro": "⚫ Black · 🔵 Blue · 🔴 Red · 🟢 Green\n\n👇 Push a slider down = that color comes out.\n🔁 Push another one = **click!** New color.",
+      "activities": [
+        { "id": "make-a-map", "name": "Make-a-Map", "emoji": "🗺️", "minutes": 40, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "color-story", "name": "Four-Color Story", "emoji": "📚", "minutes": 20, "cleanup": 0, "noise": 2, "where": ["indoor", "outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "dots-and-boxes", "name": "4-Player Dots & Boxes", "emoji": "🔲", "minutes": 15, "cleanup": 0, "noise": 1, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "doodle-patterns", "name": "Rainbow Ripple Doodles", "emoji": "🌀", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "pixel-art", "name": "Pixel Art Grid", "emoji": "🟥", "minutes": 25, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "four-panel-comic", "name": "Four-Panel Comic", "emoji": "🦸", "minutes": 40, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] }
+      ]
+    }
+  ]
+}

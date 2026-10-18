@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">A cheap plastic kitchen spray bottle</title>
+  <defs>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#bfe6ff"/>
+      <stop offset=".45" stop-color="#eef9ff"/>
+      <stop offset="1" stop-color="#a5d8fb"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#55b8f7"/>
+      <stop offset="1" stop-color="#1c7fd4"/>
+    </linearGradient>
+    <clipPath id="body">
+      <path d="M92 92H138Q142 92 144 98L154 128Q158 138 158 150V212Q158 226 144 226H86Q72 226 72 212V150Q72 138 76 128L86 98Q88 92 92 92Z"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="115" cy="231" rx="54" ry="6" fill="#1f2a44" opacity=".1"/>
+  <!-- bottle -->
+  <path d="M92 92H138Q142 92 144 98L154 128Q158 138 158 150V212Q158 226 144 226H86Q72 226 72 212V150Q72 138 76 128L86 98Q88 92 92 92Z" fill="url(#glass)" stroke="#7cc4f2" stroke-width="3"/>
+  <g clip-path="url(#body)">
+    <path d="M60 162q14-8 28 0t28 0t28 0t28 0V240H60Z" fill="url(#water)"/>
+    <circle cx="96" cy="196" r="3" fill="#fff" opacity=".6"/>
+    <circle cx="132" cy="182" r="2.2" fill="#fff" opacity=".6"/>
+    <circle cx="140" cy="210" r="3.5" fill="#fff" opacity=".5"/>
+  </g>
+  <line x1="120" y1="84" x2="120" y2="220" stroke="#fff" stroke-width="3" opacity=".8" stroke-linecap="round"/>
+  <path d="M83 150V206" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <!-- label -->
+  <rect x="90" y="120" width="50" height="30" rx="7" fill="#fff" stroke="#7cc4f2" stroke-width="2"/>
+  <path d="M104 127q-5 7-5 10a5 5 0 0 0 10 0q0-3-5-10z" fill="#2ba8f5"/>
+  <text x="125" y="141" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="10" fill="#1c7fd4" text-anchor="middle">H₂O</text>
+  <!-- collar -->
+  <rect x="85" y="76" width="60" height="19" rx="5" fill="#fff" stroke="#cfd8e3" stroke-width="2.5"/>
+  <path d="M95 79v13M103 79v13M111 79v13M119 79v13M127 79v13M135 79v13" stroke="#dfe6ee" stroke-width="2"/>
+  <!-- sprayer head + trigger -->
+  <path d="M150 60C163 67 165 85 159 101C157 107 149 107 149 101C152 87 150 73 143 64Z" fill="#e8612b" stroke="#c24c1e" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M89 78V52Q89 38 103 38H160Q170 38 170 47V53Q170 61 162 61H146V78Z" fill="#ff7a45" stroke="#c24c1e" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M98 46H152" stroke="#ffb08a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="168" y="42" width="13" height="15" rx="3.5" fill="#ffd23f" stroke="#c99a00" stroke-width="2"/>
+  <!-- mist -->
+  <g fill="#4fb3f6">
+    <circle cx="192" cy="49" r="3.2"/><circle cx="200" cy="43" r="2.6"/><circle cx="201" cy="55" r="2.6"/>
+    <circle cx="210" cy="38" r="2.2"/><circle cx="212" cy="49" r="2.8"/><circle cx="211" cy="61" r="2.2"/>
+    <circle cx="222" cy="33" r="1.9"/><circle cx="224" cy="45" r="2.2"/><circle cx="225" cy="56" r="2.1"/><circle cx="222" cy="67" r="1.7"/>
+    <circle cx="233" cy="40" r="1.5"/><circle cx="234" cy="52" r="1.7"/><circle cx="232" cy="63" r="1.4"/>
+  </g>
+  <!-- $1 price sticker -->
+  <g transform="rotate(-14 68 200)">
+    <circle cx="68" cy="200" r="20" fill="#ffd23f" stroke="#c99a00" stroke-width="2.5"/>
+    <text x="68" y="207" font-family="Fredoka, Arial, sans-serif" font-weight="700" font-size="19" fill="#1f2a44" text-anchor="middle">$1</text>
+  </g>
+</svg>
