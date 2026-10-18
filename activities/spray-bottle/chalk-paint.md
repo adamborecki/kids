@@ -8,7 +8,7 @@ Plain chalk + a few sprays = **bright, gooey paint!** 🤩
 - [ ] 🖌️ Old paintbrush (if you have one)
 - [ ] 👕 Old clothes
 - [ ] 🧻 A towel for hands
-- [ ] 🟦 Painter's tape (for Level Up)
+- [ ] 🟦 Painter's tape (Age 9 challenge)
 
 ## 👣 Steps
 ### 1️⃣ Draw it dry ✏️
@@ -31,21 +31,39 @@ Draw on the wet part. It's **super** bright!
 ### 6️⃣ Snap a photo 📸
 Ask a grown-up. It changes when it dries!
 
-## 🌟 Level Up
-### 🥉 Easy
-Rainbow stripes 🌈 Draw, spray, smoosh.
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-**Color mixing!** Draw blue, then yellow on top. Spray. Smoosh.
-🔵 + 🟡 = 🟢 ? Try 🔴 + 🟡 and 🔴 + 🔵 too!
+### 6️⃣ Age 6
+**Rainbow stripes** 🌈 Draw, spray, smoosh with your fingers.
 
-### 🥇 Hard
-**Tape Mosaic** 🟪🟧🟨
+### 7️⃣ Age 7
+**Color mixing** 🔬
+🔵 + 🟡 = ? · 🔴 + 🟡 = ? · 🔴 + 🔵 = ?
+Fill in the Mixing Lab on the printable.
+
+### 8️⃣ Age 8
+**Superhero outline** 🦸
+Trace a friend lying on the sidewalk. Turn them into a superhero with chalk paint!
+
+### 9️⃣ Age 9
+**Tape mosaic** 🟪🟧🟨
 1. Make a big square with painter's tape.
 2. Add crisscross tape lines inside.
 3. Fill each shape with a different color.
-4. Spray it all. Let it dry.
-5. **Peel the tape.** Ta-da! ✨
+4. Spray. Let it dry. **Peel the tape.** ✨
+
+### 🔟 Age 10
+**3D hole illusion** 🕳️
+Draw a "hole" in the sidewalk. Make one side dark, one side light.
+Find the exact spot where the photo looks real 📸
+
+### 🚀 Age 11+
+**Mural like a pro** 🖼️
+1. Sketch it on graph paper (or draw a grid in the printable box).
+2. Draw a big chalk grid on the sidewalk (1 paper square = 1 sidewalk square).
+3. Copy square by square.
+Real mural painters scale up pictures **exactly** this way.
 
 ## 🧠 Why It Works
 - 🔍 Dry chalk is bumpy and dusty. It bounces light everywhere, so it looks pale.
@@ -58,7 +76,7 @@ Rainbow stripes 🌈 Draw, spray, smoosh.
 - 🧱 Some porous surfaces (unsealed brick, wood decks) can hold bright chalk for a while. Test a small spot first.
 
 ## 🧽 Cleanup
-**$$** — chalky hands + knees
+chalky hands + knees
 - [ ] 🧻 Wipe hands on the towel
 - [ ] 🚿 Rinse hands (and knees!)
 - [ ] 👟 Shoes off before going inside

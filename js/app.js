@@ -1,6 +1,6 @@
 /* The Fun Drawer — tiny hash-routed app.
-   #/                      → pick a thing (categories)
-   #/<category>            → activity list
+   #/                      → pick a thing + find activities (filters)
+   #/<category>            → that category's activities (filters)
    #/<category>/<activity> → activity folder (markdown split into tabs at each ## heading)
 */
 (() => {
@@ -8,8 +8,12 @@
 
   const app = document.getElementById("app");
   const pageSize = document.getElementById("page-size");
-  const PAPER_KEY = "funDrawer.paper";
+  const ageSelect = document.getElementById("age");
+  const KEYS = { paper: "funDrawer.paper", filters: "funDrawer.filters", panel: "funDrawer.panelOpen" };
   let catalog = null;
+  let S = null;            // catalog.scales
+  let FACETS = [];
+  let onAge = null;        // current view's handler for an age change
 
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },
@@ -24,36 +28,180 @@
     ? window.marked.parse(text, { gfm: true, breaks: true })
     : `<pre>${esc(text)}</pre>`);
 
-  const cash = (n) =>
-    `<span class="cash" title="Cleanup: ${esc(catalog.cleanup[n] || "")}"><b>${"$".repeat(n)}</b><i>${"$".repeat(3 - n)}</i></span>`;
+  /* ---------- Activity facts → labels ---------- */
+  const timeBucket = (a) => (a.minutes <= S.time.short ? "short" : a.minutes <= S.time.medium ? "medium" : "long");
+  const ageText = (n) => (n >= 11 ? "11+" : String(n));
+  const ageRange = (a) => (a.ages[0] === a.ages[1] ? ageText(a.ages[0]) : `${a.ages[0]}–${ageText(a.ages[1])}`);
+  const both = (list, map, bothLabel) => (list.length > 1 ? bothLabel : map[list[0]]);
+  const cash = (n) => `<span class="cash"><b>${"$".repeat(n)}</b><i>${"$".repeat(3 - n)}</i></span>`;
 
-  const timeOf = (a) => a.time || `${a.minutes} min`;
-  const docx = (paper, name) => `print/${paper}/${name}.docx`;
-  const paper = () => (document.documentElement.dataset.paper === "a4" ? "a4" : "letter");
+  const labels = (a) => ({
+    time: `${S.timeLabels[timeBucket(a)]} · ${esc(a.time || a.minutes + " min")}`,
+    cleanup: a.cleanup ? `${S.cleanup[a.cleanup]} ${cash(a.cleanup)}` : S.cleanup[0],
+    noise: S.noise[a.noise],
+    where: both(a.where, S.where, "🏠🌳 In or out"),
+    players: both(a.players, S.players, "👤👥 Solo or group"),
+    ages: `🎂 Ages ${ageRange(a)}`,
+  });
+
+  const badges = (a) => Object.entries(labels(a)).map(([k, v]) => {
+    const level = k === "noise" ? ` n${a.noise}` : k === "cleanup" ? ` c${a.cleanup}` : "";
+    return `<span class="badge b-${k}${level}">${v}</span>`;
+  }).join("");
+
+  /* ---------- Filters ---------- */
+  function buildFacets() {
+    FACETS = [
+      { key: "age", label: "🎂 Age", single: true,
+        options: S.ages.map((n) => ({ id: String(n), label: ageText(n) })),
+        test: (a, v) => a.ages[0] <= +v && +v <= a.ages[1] },
+      { key: "where", label: "📍 Where",
+        options: Object.entries(S.where).map(([id, label]) => ({ id, label })),
+        test: (a, v) => a.where.includes(v) },
+      { key: "time", label: "⏱️ Time",
+        options: [
+          { id: "short", label: `${S.timeLabels.short} <small>≤${S.time.short}m</small>` },
+          { id: "medium", label: `${S.timeLabels.medium} <small>≤${S.time.medium}m</small>` },
+          { id: "long", label: `${S.timeLabels.long} <small>${S.time.medium + 1}m+</small>` },
+        ],
+        test: (a, v) => timeBucket(a) === v },
+      { key: "cleanup", label: "🧽 Cleanup",
+        options: S.cleanup.map((l, i) => ({ id: String(i), label: l.replace(" cleanup", "") })),
+        test: (a, v) => a.cleanup === +v },
+      { key: "noise", label: "🔊 Noise",
+        options: S.noise.map((label, i) => ({ id: String(i), label })),
+        test: (a, v) => a.noise === +v },
+      { key: "players", label: "👥 Players",
+        options: Object.entries(S.players).map(([id, label]) => ({ id, label })),
+        test: (a, v) => a.players.includes(v) },
+    ];
+  }
+
+  const filters = {};
+  function loadFilters() {
+    let saved = {};
+    try { saved = JSON.parse(store.get(KEYS.filters) || "{}"); } catch { /* ignore */ }
+    FACETS.forEach((f) => { filters[f.key] = new Set((saved[f.key] || []).filter((v) => f.options.some((o) => o.id === v))); });
+  }
+  function saveFilters() {
+    const out = {};
+    FACETS.forEach((f) => { out[f.key] = [...filters[f.key]]; });
+    store.set(KEYS.filters, JSON.stringify(out));
+  }
+  const age = () => [...filters.age][0] || "";
+  const activeCount = () => FACETS.reduce((n, f) => n + filters[f.key].size, 0);
+
+  // AND across groups, OR inside a group. `skip` ignores one group (for live counts).
+  const matches = (a, skip) => FACETS.every((f) =>
+    f.key === skip || !filters[f.key].size || [...filters[f.key]].some((v) => f.test(a, v)));
+
+  function setAge(v) {
+    filters.age = new Set(v ? [v] : []);
+    saveFilters();
+    ageSelect.value = v;
+    if (onAge) onAge();
+  }
+  ageSelect.addEventListener("change", () => setAge(ageSelect.value));
+
+  // pool: [{cat, a}] · draw(hits) paints the results. Returns a repaint function.
+  function filterPanel(root, pool, draw) {
+    const panel = document.createElement("details");
+    panel.className = "filter-panel";
+    panel.open = store.get(KEYS.panel) !== "0";
+    panel.addEventListener("toggle", () => store.set(KEYS.panel, panel.open ? "1" : "0"));
+    root.appendChild(panel);
+
+    const paint = () => {
+      const hits = pool.filter((p) => matches(p.a));
+      const n = activeCount();
+      panel.innerHTML = `
+        <summary>
+          <span class="fp-title">🔎 Filters</span>
+          ${n ? `<span class="fp-on">${n} on</span>` : ""}
+          <span class="fp-count">${hits.length} of ${pool.length}</span>
+          ${n ? `<button type="button" class="fp-clear" data-clear>✖ Clear</button>` : ""}
+        </summary>
+        <div class="fp-groups">
+          ${FACETS.map((f) => `
+            <div class="fp-group">
+              <div class="fp-label">${f.label}</div>
+              <div class="fp-chips">
+                ${f.options.map((o) => {
+                  const on = filters[f.key].has(o.id);
+                  const count = pool.filter((p) => matches(p.a, f.key) && f.test(p.a, o.id)).length;
+                  return `<button type="button" class="chip${count || on ? "" : " zero"}" data-k="${f.key}" data-v="${o.id}" aria-pressed="${on}">${o.label} <span class="ct">${count}</span></button>`;
+                }).join("")}
+              </div>
+            </div>`).join("")}
+        </div>`;
+      draw(hits);
+    };
+
+    panel.addEventListener("click", (e) => {
+      const chip = e.target.closest(".chip");
+      const clear = e.target.closest("[data-clear]");
+      if (clear) {
+        e.preventDefault();
+        FACETS.forEach((f) => filters[f.key].clear());
+        saveFilters(); ageSelect.value = ""; paint();
+      } else if (chip) {
+        const { k, v } = chip.dataset;
+        const f = FACETS.find((x) => x.key === k);
+        const set = filters[k];
+        if (set.has(v)) set.delete(v);
+        else { if (f.single) set.clear(); set.add(v); }
+        saveFilters();
+        if (k === "age") ageSelect.value = age();
+        paint();
+      }
+    });
+    paint();
+    return paint;
+  }
+
+  const card = ({ cat, a }, showCat) => `
+    <a class="act-card" href="#/${cat.id}/${a.id}" style="--c:${cat.color}">
+      <span class="act-emoji" aria-hidden="true">${a.emoji}</span>
+      <div>
+        ${showCat ? `<div class="act-cat">${cat.emoji} ${esc(cat.name)}</div>` : ""}
+        <h3>${esc(a.name)}</h3>
+        <div class="badges">${badges(a)}</div>
+      </div>
+    </a>`;
+
+  const emptyMsg = `<p class="empty">No matches 🤷 Try turning off a filter.</p>`;
 
   /* ---------- Paper size (Letter / A4) ---------- */
+  const docx = (paper, name) => `print/${paper}/${name}.docx`;
+  const paper = () => (document.documentElement.dataset.paper === "a4" ? "a4" : "letter");
   function setPaper(p) {
     p = p === "a4" ? "a4" : "letter";
     document.documentElement.dataset.paper = p;
     pageSize.textContent = p === "a4"
       ? "@page { size: A4; margin: 14mm; }"
       : "@page { size: letter; margin: 0.6in; }";
-    document.querySelectorAll("[data-paper]").forEach((b) => {
-      if (b.tagName === "BUTTON") b.setAttribute("aria-pressed", String(b.dataset.paper === p));
-    });
+    document.querySelectorAll("button[data-paper]").forEach((b) =>
+      b.setAttribute("aria-pressed", String(b.dataset.paper === p)));
     document.querySelectorAll("a[data-docx]").forEach((a) => {
       a.href = docx(p, a.dataset.docx);
       a.querySelector(".paper-name").textContent = p === "a4" ? "A4" : "Letter";
     });
-    store.set(PAPER_KEY, p);
+    store.set(KEYS.paper, p);
   }
-  document.querySelectorAll(".paper button").forEach((b) =>
-    b.addEventListener("click", () => setPaper(b.dataset.paper)));
-
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-paper]");
+    if (b) setPaper(b.dataset.paper);
+  });
+  const paperToggle = () => `
+    <span class="paper" role="group" aria-label="Paper size">
+      <button type="button" data-paper="letter">Letter</button><button type="button" data-paper="a4">A4</button>
+    </span>`;
   const wordLink = (name, label = "Word") =>
     `<a class="btn" data-docx="${esc(name)}" href="${docx(paper(), name)}" download>📄 <span>${label} (<span class="paper-name">${paper() === "a4" ? "A4" : "Letter"}</span>)</span></a>`;
 
   /* ---------- Views ---------- */
+  const allPool = () => catalog.categories.flatMap((cat) => cat.activities.map((a) => ({ cat, a })));
+
   function renderHome() {
     document.title = "The Fun Drawer";
     app.innerHTML = `
@@ -70,10 +218,18 @@
             <span class="pill">${c.activities.length} activities ▶</span>
           </a>`).join("")}
       </div>
+      <h2 class="find-head">🔎 Or find the perfect activity</h2>
+      <div class="filters-slot"></div>
+      <div class="act-list"></div>
       <div class="bundle">
         <p>🖨️ Want it all on paper?</p>
+        ${paperToggle()}
         ${wordLink("fun-drawer-everything", "Everything booklet")}
       </div>`;
+    const list = app.querySelector(".act-list");
+    onAge = filterPanel(app.querySelector(".filters-slot"), allPool(),
+      (hits) => { list.innerHTML = hits.length ? hits.map((p) => card(p, true)).join("") : emptyMsg; });
+    setPaper(paper());
   }
 
   function renderCategory(cat) {
@@ -88,36 +244,12 @@
           <div class="intro">${md(cat.intro)}</div>
         </div>
       </header>
-      <div class="filters" role="group" aria-label="Filter activities">
-        <button class="chip" data-f="all" aria-pressed="true">🌟 All</button>
-        <button class="chip" data-f="quick" aria-pressed="false">⚡ Quick (15 min or less)</button>
-        <button class="chip" data-f="clean" aria-pressed="false">✨ Easy cleanup ($)</button>
-      </div>
+      <div class="filters-slot"></div>
       <div class="act-list"></div>
-      <p class="actions" style="margin-top:18px">${wordLink(cat.id + "--all", "Print all " + cat.name)}</p>`;
-
+      <p class="actions" style="margin-top:18px">${paperToggle()} ${wordLink(cat.id + "--all", "Print all " + cat.name)}</p>`;
     const list = app.querySelector(".act-list");
-    const draw = (f) => {
-      const items = cat.activities.filter((a) =>
-        f === "quick" ? a.minutes <= 15 : f === "clean" ? a.cleanup === 1 : true);
-      list.innerHTML = items.length ? items.map((a) => `
-        <a class="act-card" href="#/${cat.id}/${a.id}">
-          <span class="act-emoji" aria-hidden="true">${a.emoji}</span>
-          <div>
-            <h2>${esc(a.name)}</h2>
-            <div class="meta">
-              <span>⏱️ ${esc(timeOf(a))}</span>
-              <span>🧽 ${cash(a.cleanup)}</span>
-              <span>👧 ${esc(a.ages)}</span>
-            </div>
-          </div>
-        </a>`).join("") : `<p class="empty">Nothing here yet 🤷</p>`;
-    };
-    app.querySelectorAll(".chip").forEach((chip) => chip.addEventListener("click", () => {
-      app.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
-      draw(chip.dataset.f);
-    }));
-    draw("all");
+    onAge = filterPanel(app.querySelector(".filters-slot"), cat.activities.map((a) => ({ cat, a })),
+      (hits) => { list.innerHTML = hits.length ? hits.map((p) => card(p, false)).join("") : emptyMsg; });
     setPaper(paper());
   }
 
@@ -159,14 +291,10 @@
         <span class="act-emoji" aria-hidden="true">${act.emoji}</span>
         <h1>${esc(act.name)}</h1>
       </div>
-      <ul class="facts">
-        <li>⏱️ <b>${esc(timeOf(act))}</b></li>
-        <li>🧽 Cleanup ${cash(act.cleanup)}</li>
-        <li>👧 Ages <b>${esc(act.ages)}</b></li>
-        <li>${esc(act.where)}</li>
-      </ul>
+      <div class="badges big">${badges(act)}</div>
       <div class="actions">
         <button class="btn primary" type="button" data-print>🖨️ Print</button>
+        ${paperToggle()}
         ${wordLink(`${cat.id}--${act.id}`)}
       </div>
       <div class="intro-box"></div>
@@ -194,10 +322,11 @@
       t.className = "tab"; t.type = "button";
       t.setAttribute("role", "tab");
       t.setAttribute("aria-controls", s.el.id);
-      t.innerHTML = `<span class="ico" aria-hidden="true">${ico}</span><span>${esc(label)}</span>`;
+      t.innerHTML = `<span class="ico" aria-hidden="true">${ico}</span><span class="tl">${esc(label)}</span>`;
       t.addEventListener("click", () => show(i));
       tabs.appendChild(t);
       box.appendChild(s.el);
+      s.tab = t;
     });
     const allTab = document.createElement("button");
     allTab.className = "tab"; allTab.type = "button"; allTab.setAttribute("role", "tab");
@@ -205,14 +334,53 @@
     allTab.addEventListener("click", () => show(-1));
     tabs.appendChild(allTab);
 
+    // "By Age": wrap each "### … Age N" heading + what follows it into one block.
+    const ageSec = sections.find((s) => /by age/i.test(s.title));
+    let applyAge = () => {};
+    if (ageSec) {
+      const blocks = [];
+      let cur = null;
+      for (const node of [...ageSec.el.childNodes]) {
+        const m = node.nodeName === "H3" && node.textContent.match(/Age (\d+)/);
+        if (m) {
+          cur = document.createElement("div");
+          cur.className = "age-block";
+          cur.dataset.age = m[1];
+          node.before(cur);
+          blocks.push(cur);
+        }
+        if (cur) cur.appendChild(node);
+      }
+      const picker = document.createElement("div");
+      picker.className = "age-picker";
+      picker.innerHTML = `<span>🎂 Age:</span>` +
+        S.ages.map((n) => `<button type="button" class="chip" data-age="${n}">${ageText(n)}</button>`).join("") +
+        `<button type="button" class="chip" data-age="">All</button>`;
+      ageSec.el.querySelector("h2").after(picker);
+      picker.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-age]");
+        if (b) setAge(b.dataset.age);
+      });
+
+      applyAge = () => {
+        const a = age();
+        ageSec.el.classList.toggle("ages-filtered", !!a);
+        blocks.forEach((b) => b.classList.toggle("mine", b.dataset.age === a));
+        picker.querySelectorAll("[data-age]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.age === a)));
+        ageSec.tab.querySelector(".tl").textContent = a ? `Age ${ageText(+a)}` : ageSec.label;
+      };
+      applyAge();
+    }
+    onAge = applyAge;
+
     // Pager at the bottom of each part
     sections.forEach((s, i) => {
       const prev = sections[i - 1], next = sections[i + 1];
       const nav = document.createElement("div");
       nav.className = "pager";
       nav.innerHTML =
-        (prev ? `<button class="btn" type="button" data-go="${i - 1}">◀ ${prev.ico} ${esc(prev.label)}</button>` : "") +
-        (next ? `<button class="btn primary next" type="button" data-go="${i + 1}">${next.ico} ${esc(next.label)} ▶</button>`
+        (prev ? `<button class="btn" type="button" data-go="${i - 1}">◀ ${prev.ico} <span class="pl">${esc(prev.label)}</span></button>` : "") +
+        (next ? `<button class="btn primary next" type="button" data-go="${i + 1}">${next.ico} <span class="pl">${esc(next.label)}</span> ▶</button>`
               : `<a class="btn primary next" href="#/${cat.id}">🎉 Done! More ${esc(cat.name)} ▶</a>`);
       s.el.appendChild(nav);
     });
@@ -231,7 +399,7 @@
       });
     }
 
-    // Make checklists tappable, mark empty fill-in tables, let wide tables scroll on phones.
+    // Make checklists tappable, mark fill-in tables, let wide tables scroll on phones.
     app.querySelectorAll('input[type="checkbox"]').forEach((c) => { c.disabled = false; });
     app.querySelectorAll(".section table").forEach((t) => {
       // A wide table that's empty except for row labels = drawing grid (pixel art).
@@ -254,6 +422,7 @@
   function route() {
     const [cId, aId] = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
     app.style.removeProperty("--c");
+    onAge = null;
     const cat = catalog.categories.find((c) => c.id === cId);
     const act = cat && cat.activities.find((a) => a.id === aId);
     if (act) renderActivity(cat, act);
@@ -264,13 +433,19 @@
   }
 
   async function init() {
-    setPaper(store.get(PAPER_KEY) || "letter");
+    setPaper(store.get(KEYS.paper) || "letter");
     try {
       catalog = await fetch("catalog.json").then((r) => r.json());
     } catch {
       app.innerHTML = `<p class="error">😬 The drawer is stuck. Open this site through a web server (GitHub Pages, or <code>python3 -m http.server</code>).</p>`;
       return;
     }
+    S = catalog.scales;
+    buildFacets();
+    loadFilters();
+    ageSelect.innerHTML = `<option value="">Any</option>` +
+      S.ages.map((n) => `<option value="${n}">${ageText(n)}</option>`).join("");
+    ageSelect.value = age();
     window.addEventListener("hashchange", route);
     route();
   }

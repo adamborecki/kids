@@ -37,20 +37,38 @@ Or twist a pipe cleaner and curl the ends for antennae.
 ### 8️⃣ FLY! 🦋
 Hang it in a window or on a string.
 
-## 🌟 Level Up
-### 🥉 Easy
-Use **one color**. Watch it spread.
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
+### 6️⃣ Age 6
+Scribble, spray, clip. Make **3 butterflies** for the window 🦋🦋🦋
+
+### 7️⃣ Age 7
 **Matching wings** 🪞
-Fold the filter in half. Color one side. Press hard. Open it. Spray!
+Fold the filter in half. Color one side. Press hard. Open. Spray!
 
-### 🥇 Hard
-**Secret colors in black** 🕵️
-1. Draw a thick **black** washable ring in the middle.
-2. Spray lightly.
-3. Watch black split into blue, purple, maybe yellow!
-(Every brand is different. Test a few!)
+### 8️⃣ Age 8
+**Secret colors** 🕵️
+Test black, brown, green and purple washable markers.
+What colors are hiding inside? Fill in the Secret Colors Lab.
+
+### 9️⃣ Age 9
+**Fair test** ⚖️
+Same marker, same scribble. Try 1 spray vs 3 sprays vs 6 sprays.
+Which spreads most? Change **only one thing** — that's how scientists test.
+
+### 🔟 Age 10
+**Mystery marker** 🔎
+A grown-up writes a secret note with **one** of 3 black markers.
+Test all 3 markers AND the note. Which marker matches?
+(Real detectives use this to match inks!)
+
+### 🚀 Age 11+
+**Measure it** 📏
+Use a **strip** of filter in a cup of water (instead of spraying).
+Dot ink 2 cm from the bottom. Let the water climb.
+Rf = distance the color moved ÷ distance the water moved
+Make a results table. Write a 3-sentence conclusion.
 
 ## 🧠 Why It Works
 - 🧻 Paper is full of tiny tubes. Water **climbs** through them.
@@ -64,7 +82,7 @@ Fold the filter in half. Color one side. Press hard. Open it. Spray!
 - 🖐️ Fingers will get inky. Soap + water fixes it.
 
 ## 🧽 Cleanup
-**$$** — wet inky stuff
+wet inky stuff
 - [ ] 🧻 Toss wet paper towels
 - [ ] 🧽 Wipe the tray
 - [ ] 🖐️ Wash hands with soap

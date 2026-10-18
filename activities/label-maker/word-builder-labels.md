@@ -31,16 +31,37 @@ Can you stick them back on the right things?
 Which word was hardest? Plan it on paper.
 Print it **once** on silver. You earned it! 🏆
 
-## 🌟 Level Up
-### 🥉 Easy — 3 letters
-CUP · BED · RUG · MAT · TOY · BOX · HAT · PAN
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium — 4 or 5 letters
-DOOR · LAMP · SINK · CHAIR · TABLE · CLOCK · SHOES · COUCH
+### 6️⃣ Age 6
+**3-letter words** — CUP · BED · RUG · MAT · TOY · BOX · HAT · PAN
+Do a reading walk 🚶
 
-### 🥇 Hard — two words or a new language
-RED CHAIR · SOFT RUG · BIG WINDOW
-🌎 Or Spanish: PUERTA (door) · MESA (table) · SILLA (chair) · CAMA (bed)
+### 7️⃣ Age 7
+**4–5 letter words** — DOOR · LAMP · SINK · CHAIR · TABLE · CLOCK
+Play the mix-up game 🔀
+
+### 8️⃣ Age 8
+**Describing words** — RED CHAIR · SOFT RUG · BIG WINDOW · COLD FRIDGE
+
+### 9️⃣ Age 9
+**Spelling from memory** 🧠
+A grown-up pulls all the labels. Write them again from memory. Check!
+
+### 🔟 Age 10
+**New language** 🌎
+Label 10 things in Spanish (or any language): PUERTA (door) · MESA (table) · SILLA (chair) · CAMA (bed)
+Quiz the family at dinner 🍽️
+
+### 🚀 Age 11+
+**Word origins** 📜
+Add where the word came from:
+- WINDOW → Old Norse *vindauga* = "wind eye" 👁️
+- SANDWICH → named after the Earl of Sandwich 🥪
+- ALARM → Italian *all'arme* = "to arms!" ⚔️
+
+Look up 5 more. Put the best one on silver ✨
 
 ## 🧠 Why It Works
 - 🔗 Seeing a word **on** the real thing links word ↔ thing in your brain.
@@ -53,14 +74,14 @@ RED CHAIR · SOFT RUG · BIG WINDOW
 - 🎯 Start with 5 words. Add 2–3 new ones each day.
 
 ## 🧽 Cleanup
-**$** — leave them up a few days!
+leave them up a few days!
 - [ ] 🟨 Peel labels when done
 - [ ] 🫙 Save them in a "word jar" to review
 
 ## 🖨️ Printable
 ### 📋 My Word List — check when you can read it!
 
-| 🥉 Easy | ✅ | 🥈 Medium | ✅ | 🥇 Hard | ✅ |
+| 6️⃣ Age 6 | ✅ | 7️⃣ Age 7 | ✅ | 8️⃣ Age 8+ | ✅ |
 |---|---|---|---|---|---|
 | CUP | ⬜ | DOOR | ⬜ | RED CHAIR | ⬜ |
 | BED | ⬜ | LAMP | ⬜ | SOFT RUG | ⬜ |

@@ -36,18 +36,29 @@ Use a different **voice** for each color!
 - 🚀 "Our couch blasted off into space…"
 - 🐶 "The dog found a secret door in the backyard…"
 
-## 🌟 Level Up
-### 🥉 Easy
-Grown-up writes. Kid **tells** the sentences. Or **draw** each turn! 🖍️
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-Everyone writes their own sentences.
+### 6️⃣ Age 6
+**Tell** the story out loud. A grown-up writes it in the colors. 6 sentences.
 
-### 🥇 Hard
-**Story Rules** 🎲 Your story must include:
-- 💥 a sound word (BOOM! SPLAT!)
-- 😢 a feeling
-- 🔄 a twist nobody expected
+### 7️⃣ Age 7
+Write your **own** sentences. 8 total.
+
+### 8️⃣ Age 8
+12 sentences. Read it aloud with a **different voice** for each color 🎭
+
+### 9️⃣ Age 9
+**Story rules** 🎲 Must include: 💥 a sound word, 😢 a feeling, 🔄 a twist.
+
+### 🔟 Age 10
+**Talking only** 💬
+Characters can **only speak** — no narrator. Use real quotation marks: "Like this!"
+
+### 🚀 Age 11+
+**Plan + edit** ✂️
+Plan the shape first: beginning → rising problem → big moment → ending.
+After writing, become the editor: click **red** and fix 3 things.
 
 ## 🧠 Why It Works
 - 🎨 Colors show **who said what** — like speech bubbles in comics.
@@ -60,7 +71,7 @@ Everyone writes their own sentences.
 - 📸 Snap a photo of good ones — they're fun to reread later.
 
 ## 🧽 Cleanup
-**$** — click the pen closed! 🖊️
+click the pen closed! 🖊️
 
 ## 🖨️ Printable
 ### 🎭 Our Characters

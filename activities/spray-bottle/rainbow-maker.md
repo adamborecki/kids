@@ -27,19 +27,44 @@ See the stripes? That's YOUR rainbow! 🎉
 ### 5️⃣ Name the colors 🗣️
 🔴 Red · 🟠 Orange · 🟡 Yellow · 🟢 Green · 🔵 Blue · 🟣 Purple
 
-## 🌟 Level Up
-### 🥉 Easy
-Find the rainbow. Shout "I MADE IT!" 📣
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-Look for a **double rainbow** 🌈🌈
-It's fainter and outside the first one.
-👀 The colors are **flipped**!
+### 6️⃣ Age 6
+A grown-up helps you stand in the right spot.
+Find the rainbow. Name all 6 colors out loud! 🗣️
 
-### 🥇 Hard
-Stand next to a friend. You spray.
-Who sees the rainbow? Do you BOTH see it? 🤔
-(Hint: everyone sees their **own** rainbow!)
+### 7️⃣ Age 7
+Make it **all by yourself**. 💪
+Hunt for a **double rainbow** 🌈🌈 — it's fainter, outside the first one.
+👀 Which color is on top in each one? (They're flipped!)
+
+### 8️⃣ Age 8
+**Rainbow Detective** 🕵️
+Try at 3 times: morning 🌅, noon ☀️, afternoon 🌇.
+Fill in a Rainbow Report each time. When does it work best?
+
+### 9️⃣ Age 9
+**Indoor rainbow** 🏠
+Put a clear glass of water on a sunny windowsill. Put white paper on the floor below.
+Move the paper until a rainbow shows up. Draw a diagram: ☀️ → 🥛 → 📄
+
+### 🔟 Age 10
+**Shadow test** 📏
+Measure your height. Measure your shadow.
+- Shadow **longer** than you? Sun is low → rainbow likely ✅
+- Shadow **shorter**? Sun is too high → probably no rainbow ❌
+
+Predict first. Then spray. Were you right?
+
+### 🚀 Age 11+
+**The 42° secret** 📐
+A rainbow is a circle, **42°** around the shadow of your head.
+1. Cut a 42° angle from cardboard (use a protractor).
+2. Hold the corner at your eye. Point one edge at your head's shadow.
+3. Spray — the rainbow is right along the other edge!
+
+✍️ Then explain **why the second rainbow's colors are flipped** (hint: light bounces twice inside each drop).
 
 ## 🧠 Why It Works
 - ☀️ Sunlight looks white… but it is **all colors mixed**.
@@ -54,7 +79,7 @@ Who sees the rainbow? Do you BOTH see it? 🤔
 - 🕙 Best before ~10 am or after ~4 pm. A rainbow needs the sun **low** in the sky (under about 42°). At noon in summer it often won't work — that's physics, not you!
 
 ## 🧽 Cleanup
-**$** — almost nothing!
+almost nothing!
 - [ ] 🪴 Pour leftover water on a plant
 - [ ] 🧴 Bottle back in its spot
 

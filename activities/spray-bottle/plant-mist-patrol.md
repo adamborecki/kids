@@ -31,21 +31,37 @@ Poke a finger into the dirt, up to the first bump.
 ### 5️⃣ Report it 📋
 Check the box on the chart. Add notes!
 
-## 🌟 Level Up
-### 🥉 Easy
-Mist **one** plant. Give it a name! 🏷️
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-Use the label maker to make a **name tag** for each plant.
-(Practice on paper first — save the Magic Silver! ✨)
+### 6️⃣ Age 6
+Patrol with a grown-up. Finger-test one plant. Check the box ✅
 
-### 🥇 Hard
+### 7️⃣ Age 7
+Do the **whole patrol yourself** for one week. Fill in the chart.
+
+### 8️⃣ Age 8
+**Name tags** 🏷️
+Find each plant's real name (ask, or use a plant app).
+Make a label for each one — practice on paper first, save the Magic Silver! ✨
+
+### 9️⃣ Age 9
 **Bean in a Bag** 🫘
 1. Wet a paper towel with your spray bottle.
 2. Put it in a zip bag with 3 dry beans.
-3. Tape it to a sunny window.
-4. Mist it when it looks dry.
-5. Watch roots 🌱 in about 3–7 days!
+3. Tape it to a sunny window. Mist it when it looks dry.
+4. Draw it every 2 days. Roots in about 3–7 days! 🌱
+
+### 🔟 Age 10
+**Growth graph** 📈
+Measure your bean sprout (or a plant's newest leaf) every 2 days in mm.
+Make a line graph. When did it grow fastest?
+
+### 🚀 Age 11+
+**Real experiment** 🔬
+Two bean bags: one misted daily, one only on day 1. (Or: sunny window vs dark cupboard.)
+Write a prediction. Test for 10 days. Write a conclusion.
+Bonus: make a **care card** for each house plant — light, water, toxic or not.
 
 ## 🧠 Why It Works
 - 🌴 Many house plants come from **rainforests** where the air is wet.
@@ -59,7 +75,7 @@ Use the label maker to make a **name tag** for each plant.
 - ☠️ Some plants (pothos, peace lily, dieffenbachia) are toxic if chewed. Tell kids: look, don't taste.
 
 ## 🧽 Cleanup
-**$** — tiny drips
+tiny drips
 - [ ] 🧻 Wipe drips on the windowsill or floor
 - [ ] 🧴 Bottle back in its home
 

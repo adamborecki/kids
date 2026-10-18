@@ -37,18 +37,30 @@ Add a compass: **N E S W** 🧭
 ### 7️⃣ Make a key 🔑
 A little box that tells what each color means.
 
-## 🌟 Level Up
-### 🥉 Easy
-Draw your **room from above** — like a bird sees it 🐦
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-**Treasure Island** 🏝️
-5 places with names + an X. Give it to someone. Can they find the X?
+### 6️⃣ Age 6
+Map **your room from above** — like a bird sees it 🐦 Use all 4 colors.
 
-### 🥇 Hard
+### 7️⃣ Age 7
+**Treasure island** 🏝️ 5 named places + an X ❌
+
+### 8️⃣ Age 8
+Add a **compass rose** 🧭 and a **map key** 🔑
+
+### 9️⃣ Age 9
 **Real treasure map** 🏴‍☠️
-Map one room. Hide a small toy. Mark it with ❌.
-Can someone **follow your map** to find it?
+Map one room. Hide a toy. Mark it with ❌. Can someone follow your map to it?
+
+### 🔟 Age 10
+**Map to scale** 📏
+Measure the room in feet (or big steps). On the grid, 1 square = 1 foot.
+
+### 🚀 Age 11+
+**Memory vs. reality** 🌍
+Draw your neighborhood from memory. Then compare with a real online map.
+What did you get wrong? Add grid coordinates (A–J, 1–10) and write directions using them.
 
 ## 🧠 Why It Works
 - 🌍 Almost every map in the world uses **blue for water**. Colors are a code everyone knows!
@@ -58,10 +70,10 @@ Can someone **follow your map** to find it?
 ## 🛟 Grown-Up Notes
 - 🗺️ Show a real map (paper or phone) first — kids love spotting the color code.
 - 🧭 Point out which way north is in your home.
-- 🧩 Graph-paper grid makes "Hard" much easier.
+- 🧩 Graph paper makes the Age 10 scale map much easier.
 
 ## 🧽 Cleanup
-**$** — click the pen closed! 🖊️
+click the pen closed! 🖊️
 
 ## 🖨️ Printable
 ### 🗺️ Map of: ______________________

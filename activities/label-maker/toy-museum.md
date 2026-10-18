@@ -38,17 +38,35 @@ Draw tickets. Price: 1 hug 🤗 or 3 high-fives ✋
 Give tours. Tell a story about each toy. 🎤
 Rule: **look with your eyes, not your hands** 👀
 
-## 🌟 Level Up
-### 🥉 Easy
-Just a name on each label. Give one tour.
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
+### 6️⃣ Age 6
+5 toys. Just a name on each label. Give one tour 🎤
+
+### 7️⃣ Age 7
 Every label gets **3 things**: name, where it came from, one fun fact.
+Make tickets 🎟️
 
-### 🥇 Hard
-- 🗺️ Make **wings**: Dino Wing, Car Wing, Plush Wing
-- 🗺️ Draw a **museum map**
-- 🛍️ Open a **gift shop** with your drawings (pretend money!)
+### 8️⃣ Age 8
+**Wings + map** 🗺️
+Group toys into wings (Dino Wing 🦖, Car Wing 🚗). Draw a museum map.
+
+### 9️⃣ Age 9
+**Audio tour** 🎧
+Record a 30-second talk for each exhibit (ask to use a phone).
+Visitors play it while they look!
+
+### 🔟 Age 10
+**Curator mode** 🧐
+Write labels like a real museum: **title, year, material, 2 sentences**.
+Run a gift shop with pretend money. Count the earnings 💰
+
+### 🚀 Age 11+
+**Real exhibition** 🏛️
+Pick a theme ("My LEGO through the years", "Things from Grandma").
+Interview family about the objects' history. Write a 100-word intro panel.
+Invite everyone to **opening night** 🥂 (juice counts).
 
 ## 🧠 Why It Works
 - 🏛️ Real museums label everything so visitors learn fast.
@@ -61,7 +79,7 @@ Every label gets **3 things**: name, where it came from, one fun fact.
 - ✂️ Label tape is precious: keep silver labels to ~12 letters.
 
 ## 🧽 Cleanup
-**$** — easy
+easy
 - [ ] 🧸 Toys back home
 - [ ] 🟨 Peel masking-tape labels (save them in an envelope for next time!)
 - [ ] ✨ Keep the silver label forever

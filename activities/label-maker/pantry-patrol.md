@@ -32,18 +32,32 @@ Same groups together. Labels facing out!
 Plan it on paper. Check spelling. Print **once**.
 💡 Idea: label the spray bottle **WATER ONLY** 💦
 
-## 🌟 Level Up
-### 🥉 Easy
-Sort by **color** 🌈 Red boxes here, blue boxes there.
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-Sort by **group** + make all the labels.
+### 6️⃣ Age 6
+Sort one shelf **by color** 🌈 with a grown-up.
 
-### 🥇 Hard
+### 7️⃣ Age 7
+Sort **by group** and write the practice labels.
+
+### 8️⃣ Age 8
+Do a whole shelf **solo**: out, wipe, sort, label, back in.
+
+### 9️⃣ Age 9
 **Date Detective** 🔍
-Find the "best by" date on each thing.
-Put the **oldest in front** so it gets used first.
-Stores do this! It's called **First In, First Out**.
+Find each "best by" date. Oldest goes in front.
+Stores call this **First In, First Out**.
+
+### 🔟 Age 10
+**Inventory** 📋
+List everything + how many. Flag what's running low.
+Hand a grown-up a real shopping list 🛒
+
+### 🚀 Age 11+
+**Pantry chef** 👩‍🍳
+Plan one dinner using mostly pantry food. What's missing?
+Write a grocery list with **amounts**. Bonus: design a system for the whole pantry and pitch it.
 
 ## 🧠 Why It Works
 - 🛒 Grocery stores group food so you find it fast.
@@ -56,7 +70,7 @@ Stores do this! It's called **First In, First Out**.
 - 🗑️ Grown-up decides what's expired and gets tossed.
 
 ## 🧽 Cleanup
-**$$** — crumbs happen
+crumbs happen
 - [ ] 🧹 Sweep or vacuum crumbs
 - [ ] 🧽 Wipe the table
 - [ ] ♻️ Recycle empty boxes

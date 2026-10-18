@@ -41,16 +41,30 @@ Give it to the hunter. Go go go! 🏃
 | 🪥 Brush your teeth here | Sink |
 | 👟 Feet go in, then out the door | Shoe rack |
 
-## 🌟 Level Up
-### 🥉 Easy
-**Picture clues** — draw the spot instead of writing it. 🖍️
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-**Riddle clues** — describe it without saying its name. 🤔
+### 6️⃣ Age 6
+**Picture clues** 🖍️ 3–4 spots. A grown-up helps you hide them.
 
-### 🥇 Hard
-**Code clues** — use the A=1, B=2 code! 🔢
-(See 🕵️ Secret Code Labels.)
+### 7️⃣ Age 7
+**Word clues** 📝 5 spots. "Where the milk lives 🥛"
+
+### 8️⃣ Age 8
+**Riddle clues** 🤔 Describe the spot without saying its name.
+
+### 9️⃣ Age 9
+**Code clues** 🔢 6 spots. At least 2 clues use the A=1, B=2 code (see 🕵️ Secret Code Labels).
+
+### 🔟 Age 10
+**Hunt for a little kid** 🧒
+Make a hunt for a younger kid. Match their reading level (pictures for age 6!).
+Plan it **backwards** with the Clue Planner.
+
+### 🚀 Age 11+
+**Escape-room hunt** 🔐
+Each clue needs solving: a math answer = drawer number, a Jump-3 code, a map with grid squares.
+Add a time limit ⏱️ Playtest it, then fix the clue that was too hard.
 
 ## 🧠 Why It Works
 - 🔙 **Working backwards** is a real trick that problem-solvers use.
@@ -63,7 +77,7 @@ Give it to the hunter. Go go go! 🏃
 - 👫 Taking turns as hider/hunter works great with siblings.
 
 ## 🧽 Cleanup
-**$** — collect the clues
+collect the clues
 - [ ] 🟨 Pick up **every** clue label (count them — does it match?)
 - [ ] 💎 Enjoy the treasure!
 

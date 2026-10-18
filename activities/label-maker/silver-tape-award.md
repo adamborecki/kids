@@ -45,16 +45,31 @@ The winner says thank you. Bow! 🙇
 - 🎨 TOP ARTIST
 - 🐶 GOOD DOG
 
-## 🌟 Level Up
-### 🥉 Easy
-**Draw** your nomination. Point to the winner! 👉
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-Write **3 reasons** why they should win.
+### 6️⃣ Age 6
+**Draw** your nomination. Hand over the award! 🏆
 
-### 🥇 Hard
-**Be the host!** 🎤
+### 7️⃣ Age 7
+Write **who** + **one reason** on the slip.
+
+### 8️⃣ Age 8
+Write **3 reasons**. Do the drum roll 🥁
+
+### 9️⃣ Age 9
+**Be the host** 🎤
 Welcome everyone, read the nominees, open the envelope ✉️, announce the winner.
+
+### 🔟 Age 10
+**Award committee** 📋
+Write the rules: what does it take to win? Keep the Award Log.
+Make sure it rotates fairly ⚖️
+
+### 🚀 Age 11+
+**Write the speech** ✍️
+5–6 sentences: one **specific** moment, what it showed about them, a thank-you.
+Plan the label to fit **12 characters** — spaces count!
 
 ## 🧠 Why It Works
 - 👀 You practice **noticing** good things people do.
@@ -67,7 +82,7 @@ Welcome everyone, read the nominees, open the envelope ✉️, announce the winn
 - 📅 Once a week or once a month keeps it special — and saves tape.
 
 ## 🧽 Cleanup
-**$** — nothing to it
+nothing to it
 - [ ] 🥁 Pot back in the kitchen
 - [ ] 🏷️ Label maker back in its home
 - [ ] 📝 Save the slips in a "nice things" jar 🫙

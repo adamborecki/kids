@@ -32,17 +32,38 @@ Toes stay behind the line!
 - 💦 Hit it = **1 point**
 - 🎯 Wash away a chalk circle = **5 points**
 
-## 🌟 Level Up
-### 🥉 Easy
-Big targets. Stand close. Count your hits out loud.
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-After each round, take **one step back** 👣
+### 6️⃣ Age 6
+Big targets, **2 steps** away.
+Count your hits out loud. Can you get to 10? 🔟
 
-### 🥇 Hard
-**Moving target!** 🏃
-Hang a cup on a string and give it a swing.
-Can you hit it while it moves?
+### 7️⃣ Age 7
+Stand **3 steps** back.
+Keep your own score on the card. Add up the totals! ➕
+
+### 8️⃣ Age 8
+**Back it up** 👣
+Take one step back after every round.
+What's the farthest you can still hit? Measure it with a tape measure 📏
+
+### 9️⃣ Age 9
+**Design the course** 🏗️
+5 targets. Hard ones are worth more points.
+Write the rules on the card. Test them. Change any rule that's unfair.
+
+### 🔟 Age 10
+**Accuracy %** 🎯
+Take 20 squeezes. Count your hits.
+hits ÷ 20 × 100 = your %
+Try: left hand vs right hand ✋🤚 Close vs far. Which is better?
+
+### 🚀 Age 11+
+**Launch angle lab** 📐
+From the same spot, squirt **flat**, **a little up**, and **way up**.
+Mark where each one lands with chalk. Which angle goes farthest?
+Graph distance vs. angle. (Without air, 45° wins. Does water agree?)
 
 ## 🧠 Why It Works
 - 👀✋ Aiming trains your eyes and hands to work as a team.
@@ -56,7 +77,7 @@ Can you hit it while it moves?
 - 🥤 Plastic cups survive. Paper cups get soggy fast.
 
 ## 🧽 Cleanup
-**$** — quick!
+quick!
 - [ ] 🥤 Stack the cups
 - [ ] 🏓 Find every ball (count them!)
 - [ ] 🌧️ Chalk? Leave it. Rain cleans it.

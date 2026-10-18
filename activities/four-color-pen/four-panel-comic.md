@@ -33,16 +33,27 @@ Grass, trees, walls — fill in the world.
 ### 6️⃣ Title + your name ✍️
 Every comic artist signs their work!
 
-## 🌟 Level Up
-### 🥉 Easy
-Just **draw** the 4 boxes. Tell the words out loud. 🗣️
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-Add speech bubbles 💬 and a sound word 💥
+### 6️⃣ Age 6
+Draw the 4 boxes. Tell the words out loud 🗣️
 
-### 🥇 Hard
-**No words at all!** 🤐
-Can someone understand your story from pictures only?
+### 7️⃣ Age 7
+Add **speech bubbles** 💬
+
+### 8️⃣ Age 8
+Add **sound words** 💥 and **motion lines** ≋
+
+### 9️⃣ Age 9
+**No words at all!** 🤐 Can someone understand it from pictures only?
+
+### 🔟 Age 10
+**True story** 📰 A funny thing that really happened this week.
+
+### 🚀 Age 11+
+**3-page comic** 📚 12 panels and a cliffhanger.
+Mix your "camera shots": close-up 👁️, wide shot 🏞️, from above 🦅.
 
 ## 🧠 Why It Works
 - 📗 Newspaper comics have used 4 boxes for 100 years. It's the perfect joke shape!
@@ -55,7 +66,7 @@ Can someone understand your story from pictures only?
 - 📸 Hang finished comics on the fridge — instant motivation.
 
 ## 🧽 Cleanup
-**$** — click the pen closed! 🖊️
+click the pen closed! 🖊️
 
 ## 🖨️ Printable
 ### 📗 Title: ______________________ · by ______________

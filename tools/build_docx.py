@@ -37,11 +37,28 @@ PANELS = re.compile(r'<div class="panels">\s*((?:<div class="draw-box[^>]*></div
 
 # ---------- markdown prep ----------
 
+SC = CATALOG["scales"]
+
+
+def age_text(n):
+    return "11+" if n >= 11 else str(n)
+
+
+def badges(act):
+    """The same badges the web app shows, as plain text."""
+    m = act["minutes"]
+    bucket = "short" if m <= SC["time"]["short"] else "medium" if m <= SC["time"]["medium"] else "long"
+    time = act.get("time") or f"{m} min"
+    cleanup = SC["cleanup"][act["cleanup"]] + (f' ({"$" * act["cleanup"]})' if act["cleanup"] else "")
+    where = "🏠🌳 In or out" if len(act["where"]) > 1 else SC["where"][act["where"][0]]
+    players = "👤👥 Solo or group" if len(act["players"]) > 1 else SC["players"][act["players"][0]]
+    lo, hi = act["ages"]
+    return dict(time=f'{SC["timeLabels"][bucket]} · {time}', cleanup=cleanup, noise=SC["noise"][act["noise"]],
+                where=where, players=players, ages=f"🎂 Ages {lo}–{age_text(hi)}")
+
+
 def facts_line(act):
-    time = act.get("time") or f'{act["minutes"]} min'
-    cash = "$" * act["cleanup"]
-    return (f'⏱️ **{time}** · 🧽 Cleanup **{cash}** ({CATALOG["cleanup"][str(act["cleanup"])]})'
-            f' · 👧 Ages **{act["ages"]}** · {act["where"]}')
+    return " · ".join(f"**{v}**" if k == "time" else v for k, v in badges(act).items())
 
 
 def prep(text):
@@ -60,21 +77,26 @@ def activity_md(cat, act):
 
 
 def category_md(cat):
-    rows = "\n".join(
-        f'| {a["emoji"]} {a["name"]} | ⏱️ {a.get("time") or str(a["minutes"]) + " min"} '
-        f'| {"$" * a["cleanup"]} | {a["ages"]} |' for a in cat["activities"])
+    rows = "\n".join("| {} {} | {} |".format(a["emoji"], a["name"], " · ".join(badges(a).values()))
+                     for a in cat["activities"])
     cover = (f'# {cat["emoji"]} {cat["name"]}\n\n'
              f'IMAGE::img/png/{cat["id"]}.png\n\n'
              f'**{cat["tagline"]}**\n\n{cat["intro"]}\n\n'
-             f'## 📂 What\'s inside\n\n| Activity | Time | 🧽 Cleanup | Ages |\n|---|---|---|---|\n{rows}\n')
+             f'## 📂 What\'s inside\n\n| Activity | Badges |\n|---|---|\n{rows}\n')
     return "\n\n".join([cover] + [activity_md(cat, a) for a in cat["activities"]])
 
 
 def everything_md():
-    legend = "\n".join(f'- **{"$" * int(k)}** = {v}' for k, v in CATALOG["cleanup"].items())
     cover = (f'# 🗄️ {CATALOG["title"]}\n\nPick a thing from the drawer. Find a fun thing to do! 🎉\n\n'
              + "\n".join(f'- {c["emoji"]} **{c["name"]}** — {c["tagline"]}' for c in CATALOG["categories"])
-             + f'\n\n### 🧽 Cleanup scale\n{legend}\n')
+             + "\n\n### 🏷️ Badges\n"
+             + f'- ⏱️ **Time:** {SC["timeLabels"]["short"]} ≤{SC["time"]["short"]} min · '
+               f'{SC["timeLabels"]["medium"]} ≤{SC["time"]["medium"]} min · {SC["timeLabels"]["long"]} longer\n'
+             + f'- 🧽 **Cleanup:** {" · ".join(SC["cleanup"])}\n'
+             + f'- 🔊 **Noise:** {" · ".join(SC["noise"])}\n'
+             + f'- 📍 **Where:** {" · ".join(SC["where"].values())}\n'
+             + f'- 👥 **Players:** {" · ".join(SC["players"].values())}\n'
+             + "- 🎂 **Ages:** every activity has a 🎚️ By Age section for ages 6 to 11+\n")
     return "\n\n".join([cover] + [category_md(c) for c in CATALOG["categories"]])
 
 

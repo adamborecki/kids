@@ -45,18 +45,30 @@ It's a picture!
 ⬜🟦🟦🟦🟦🟦⬜🟦🟦
 ⬜⬜🟦🟦🟦⬜⬜⬜🟦
 
-## 🌟 Level Up
-### 🥉 Easy
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
+
+### 6️⃣ Age 6
 Copy the ❤️ heart.
 
-### 🥈 Medium
-Copy the 🐟 fish. Then make it **2 colors** your way!
+### 7️⃣ Age 7
+Copy the 🌲 tree. Two colors!
 
-### 🥇 Hard
-**Invent your own** 🎨
-Design a pixel picture. Write the code for each row:
-"Row 1: 3 white, 1 green, 3 white"
-Give it to a friend. Can they build it from your code?
+### 8️⃣ Age 8
+Copy the 🐟 fish. Then recolor it your way.
+
+### 9️⃣ Age 9
+**Design your own** 🎨 on the 10 × 10 grid.
+
+### 🔟 Age 10
+**Pixel code** 📝
+Write your picture as row codes, like: "Row A: 3 white, 1 green, 3 white".
+Give it to someone. Can they build it from the code alone?
+
+### 🚀 Age 11+
+**Compression** 💾
+Write rows short: **3W 1G 3W** instead of W W W G W W W.
+Count how many characters you saved. Computers shrink images with this trick (it's called *run-length encoding*).
 
 ## 🧠 Why It Works
 - 📺 Every screen is made of tiny squares called **pixels**.
@@ -69,7 +81,7 @@ Give it to a friend. Can they build it from your code?
 - 🟩 Ballpoint fills slowly — little kids can do an X or a dot instead of full coloring.
 
 ## 🧽 Cleanup
-**$** — click the pen closed! 🖊️
+click the pen closed! 🖊️
 
 ## 🖨️ Printable
 ### 🟥 Pixel Grid

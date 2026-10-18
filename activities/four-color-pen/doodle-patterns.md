@@ -31,20 +31,33 @@ Fill some ripples with:
 - ~~~~~ waves
 - ○○○○ bubbles
 
-## 🌟 Level Up
-### 🥉 Easy
-Ripples around **your name**. ✍️
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
+### 6️⃣ Age 6
+Ripples around a **circle** ⭕
+
+### 7️⃣ Age 7
+Ripples around **your name** ✍️
+
+### 8️⃣ Age 8
+Fill each ripple with a **pattern**: dots, stripes, zigzags, waves.
+
+### 9️⃣ Age 9
 **Four-way mandala** 🏵️
-Fold paper into 4. Draw the same pattern in every quarter.
+Fold paper into 4. Draw the same pattern in each quarter.
 
-### 🥇 Hard
-**Pattern Codes** 🔢
-Make a color rule. Can someone guess it and keep going?
+### 🔟 Age 10
+**Pattern codes** 🔢
+Make a color rule (AB, AAB, ABCD). Can someone guess it and keep going?
 - AB: 🔵🔴🔵🔴🔵🔴
 - AAB: 🟢🟢⚫🟢🟢⚫
 - ABCD: ⚫🔵🔴🟢⚫🔵🔴🟢
+
+### 🚀 Age 11+
+**Tessellation** 🧩
+Make a shape that covers the page with **no gaps**, like M.C. Escher.
+Start with a square, cut a bump from one side, tape it to the opposite side. Trace it over and over!
 
 ## 🧠 Why It Works
 - 🔢 Patterns are **math!** The part that repeats is called the **core**.
@@ -57,7 +70,7 @@ Make a color rule. Can someone guess it and keep going?
 - 🚫 No "wrong" — wobbly ripples look cool too.
 
 ## 🧽 Cleanup
-**$** — click the pen closed! 🖊️
+click the pen closed! 🖊️
 
 ## 🖨️ Printable
 ### 🌀 Ripple Pad

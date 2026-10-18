@@ -26,17 +26,30 @@ Then you get **another turn**!
 ### 5️⃣ All boxes filled? 🔢
 Count your boxes. **Most boxes wins!** 🏆
 
-## 🌟 Level Up
-### 🥉 Easy
-Small grid (4 × 4 dots). 2 players.
+## 🎚️ By Age
+🎂 Pick the age. Every age can do the main steps — this is the **extra challenge**.
 
-### 🥈 Medium
-Big grid (6 × 6 dots). 3–4 players.
+### 6️⃣ Age 6
+Small grid, 2 players, a grown-up as your partner.
 
-### 🥇 Hard
+### 7️⃣ Age 7
+Small grid, 2 players. Count your boxes at the end.
+
+### 8️⃣ Age 8
+**Big grid**, 3–4 players 🎨
+
+### 9️⃣ Age 9
 **Secret strategy** 🤫
-Never draw the **3rd side** of a box — the next player will close it!
-Can you make the other players do it instead? 😏
+Never draw the **3rd side** of a box — the next player will grab it!
+
+### 🔟 Age 10
+**Chains** ⛓️
+At the end, boxes come in long chains. Sometimes it's smart to **give away 2 boxes** so you win the long chain. Try it!
+
+### 🚀 Age 11+
+**Invent a variant** 🛠️
+Triangles? 8 × 8? Boxes worth different points? Write the rules. Test with family.
+🧮 Bonus: how many lines fit in the small grid? (Answer below the score table.)
 
 ## 🧠 Why It Works
 - 🔮 Thinking **one move ahead** is a strategy skill.
@@ -49,7 +62,7 @@ Can you make the other players do it instead? 😏
 - 🤏 Little kids may need help spotting "almost boxes."
 
 ## 🧽 Cleanup
-**$** — click the pen closed! 🖊️
+click the pen closed! 🖊️
 
 ## 🖨️ Printable
 ### 🔲 Small Grid (2 players)
@@ -85,3 +98,5 @@ Can you make the other players do it instead? 😏
 | | 🔵 | |
 | | 🔴 | |
 | | 🟢 | |
+
+🙃 Age 11+ bonus answer: the small grid has **24 lines** (12 across + 12 down).
