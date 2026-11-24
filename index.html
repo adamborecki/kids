@@ -16,8 +16,25 @@
 <body>
   <header class="topbar no-print">
     <a href="#/" class="brand"><span aria-hidden="true">🗄️</span> The Fun Drawer</a>
-    <label class="age-pick">🎂 Age <select id="age" aria-label="Kid's age"><option value="">Any</option></select></label>
+    <div class="top-tools">
+      <label class="age-pick">🎂 <span class="al">Age</span> <select id="age" aria-label="Kid's age"><option value="">Any</option></select></label>
+      <button type="button" id="grownup" class="grown-btn" aria-pressed="false">🔒</button>
+    </div>
   </header>
+
+  <dialog id="gate" class="gate" aria-labelledby="gate-title">
+    <form method="dialog">
+      <h2 id="gate-title">🔐 Grown-up check</h2>
+      <p>Unlocks activities that need a grown-up (box cutters, hot glue, heat, dye, big messes).</p>
+      <p class="gate-q" aria-live="polite"></p>
+      <input type="number" inputmode="numeric" aria-label="Answer" autocomplete="off">
+      <p class="gate-msg" aria-live="polite"></p>
+      <div class="gate-actions">
+        <button type="submit" value="cancel" class="btn" formnovalidate>Cancel</button>
+        <button type="submit" value="ok" class="btn primary">Unlock 🔓</button>
+      </div>
+    </form>
+  </dialog>
 
   <main id="app" tabindex="-1">
     <p class="loading">Opening the drawer… 🗄️</p>

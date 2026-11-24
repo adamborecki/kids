@@ -30,20 +30,20 @@
         { "id": "firefighter-drill", "name": "Firefighter Drill", "emoji": "🚒", "minutes": 25, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["group"], "ages": [6, 8] },
         { "id": "rain-cloud-jar", "name": "Rain Cloud in a Jar", "emoji": "🌧️", "minutes": 15, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 9] },
         { "id": "bike-wash", "name": "Bike & Scooter Wash", "emoji": "🚲", "minutes": 40, "cleanup": 3, "noise": 2, "where": ["outdoor"], "players": ["group"], "ages": [6, 11] },
-        { "id": "leaf-stencil", "name": "Leaf Stencil Spray Art", "emoji": "🍃", "minutes": 30, "cleanup": 3, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "leaf-stencil", "name": "Leaf Stencil Spray Art", "emoji": "🍃", "minutes": 30, "cleanup": 3, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 11], "grownup": true },
         { "id": "snow-painting", "name": "Snow Painting", "emoji": "❄️", "minutes": 20, "cleanup": 1, "noise": 2, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 10] },
         { "id": "evaporation-race", "name": "Evaporation Race", "emoji": "🏁", "minutes": 30, "cleanup": 0, "noise": 0, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [8, 11] },
         { "id": "sprinkle-tag", "name": "Sprinkle Tag", "emoji": "🏃", "minutes": 20, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["group"], "ages": [6, 10] },
         { "id": "sponge-garden", "name": "Sponge Seed Garden", "emoji": "🌱", "minutes": 10, "time": "10 min / day", "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
         { "id": "spiderweb-hunt", "name": "Spiderweb Hunt", "emoji": "🕸️", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [7, 11] },
-        { "id": "tie-dye", "name": "Spray Tie-Dye Shirt", "emoji": "👕", "minutes": 60, "time": "60 min + 1 day", "cleanup": 3, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [8, 11] },
+        { "id": "tie-dye", "name": "Spray Tie-Dye Shirt", "emoji": "👕", "minutes": 60, "time": "60 min + 1 day", "cleanup": 3, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [8, 11], "grownup": true },
         { "id": "tissue-window", "name": "Stained-Glass Window", "emoji": "🪟", "minutes": 25, "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 9] },
         { "id": "drop-magnifier", "name": "Water Drop Magnifier", "emoji": "🔍", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
         { "id": "cooling-lab", "name": "Cool-Down Lab", "emoji": "🌡️", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["indoor", "outdoor"], "players": ["solo", "group"], "ages": [8, 11] },
         { "id": "critter-safari", "name": "Garden Critter Safari", "emoji": "🐌", "minutes": 30, "cleanup": 1, "noise": 1, "where": ["outdoor"], "players": ["solo", "group"], "ages": [6, 10] },
         { "id": "ping-pong-push", "name": "Ping-Pong Push Race", "emoji": "🏓", "minutes": 15, "cleanup": 1, "noise": 2, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [6, 9] },
         { "id": "crayon-resist", "name": "Secret Crayon Pictures", "emoji": "🕵️", "minutes": 20, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 9] },
-        { "id": "float-the-ball", "name": "Float-the-Ball Relay", "emoji": "🥤", "minutes": 20, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["group"], "ages": [6, 11] }
+        { "id": "float-the-ball", "name": "Float-the-Ball Relay", "emoji": "🥤", "minutes": 20, "cleanup": 1, "noise": 3, "where": ["outdoor"], "players": ["group"], "ages": [6, 11], "grownup": true }
       ]
     },
     {
@@ -116,6 +116,86 @@
         { "id": "flip-book", "name": "Sticky Note Flip Book", "emoji": "🎞️", "minutes": 40, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [8, 11] },
         { "id": "hand-illusion", "name": "3D Hand Illusion", "emoji": "✋", "minutes": 20, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
         { "id": "speed-sketch", "name": "Speed Sketch Showdown", "emoji": "📢", "minutes": 20, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [6, 11] }
+      ]
+    },
+    {
+      "id": "paper-towel-roll",
+      "name": "Paper Towel Roll",
+      "emoji": "🧻",
+      "image": "img/paper-towel-roll.svg",
+      "color": "#D9822B",
+      "tagline": "The empty tube = endless ideas",
+      "intro": "Don't toss it! 🗑️❌ An empty **paper towel roll** (or toilet paper roll) is a free building block. 🧱\n\n✂️ Kid scissors cut it.\n🎨 Paint, markers, and tape all stick.\n🛍️ Save a bunch in a bag — you'll use them!",
+      "activities": [
+        { "id": "binoculars", "name": "Explorer Binoculars", "emoji": "🔭", "minutes": 20, "cleanup": 1, "noise": 1, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "tube-bowling", "name": "Tube Bowling", "emoji": "🎳", "minutes": 15, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [6, 8] },
+        { "id": "marble-run", "name": "Marble Run Wall", "emoji": "🎢", "minutes": 45, "cleanup": 1, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "tube-rocket", "name": "Tube Rocket", "emoji": "🚀", "minutes": 30, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "bird-feeder", "name": "Tube Bird Feeder", "emoji": "🐦", "minutes": 20, "cleanup": 2, "noise": 0, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "tube-kazoo", "name": "Tube Kazoo", "emoji": "📯", "minutes": 10, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "phone-amplifier", "name": "Phone Speaker Amplifier", "emoji": "🔊", "minutes": 20, "cleanup": 1, "noise": 2, "where": ["indoor"], "players": ["solo"], "ages": [9, 11], "grownup": true },
+        { "id": "tube-octopus", "name": "Tube Octopus", "emoji": "🐙", "minutes": 25, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 8] },
+        { "id": "ring-toss", "name": "Tube Ring Toss", "emoji": "🎯", "minutes": 25, "cleanup": 1, "noise": 2, "where": ["indoor", "outdoor"], "players": ["group"], "ages": [6, 9] },
+        { "id": "rain-stick", "name": "Rain Stick", "emoji": "🌧️", "minutes": 30, "cleanup": 2, "noise": 2, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "tube-stamps", "name": "Tube Stamp Art", "emoji": "🖼️", "minutes": 20, "cleanup": 3, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 8] },
+        { "id": "desk-organizer", "name": "Tube Desk Organizer", "emoji": "✏️", "minutes": 30, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "tube-castle", "name": "Tube Castle", "emoji": "🏰", "minutes": 45, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 10] },
+        { "id": "race-cars", "name": "Tube Race Cars", "emoji": "🏎️", "minutes": 40, "cleanup": 1, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "seed-starters", "name": "Tube Seed Starters", "emoji": "🌱", "minutes": 25, "cleanup": 2, "noise": 0, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "constellation-viewer", "name": "Constellation Viewer", "emoji": "✨", "minutes": 20, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "tube-talkie", "name": "Tube Telephone", "emoji": "📞", "minutes": 10, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["group"], "ages": [6, 8] },
+        { "id": "color-drop", "name": "Pom-Pom Color Drop", "emoji": "🎨", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [6, 7] },
+        { "id": "tube-caterpillar", "name": "Counting Caterpillar", "emoji": "🐛", "minutes": 30, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 8] },
+        { "id": "firework-painting", "name": "Firework Painting", "emoji": "🎆", "minutes": 15, "cleanup": 3, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "pompom-launcher", "name": "Pom-Pom Launcher", "emoji": "🎯", "minutes": 20, "cleanup": 1, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [8, 11], "grownup": true },
+        { "id": "tube-tower", "name": "Tube Tower Challenge", "emoji": "🗼", "minutes": 30, "cleanup": 1, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "treat-box", "name": "Tiny Gift Box", "emoji": "🎁", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "tube-pitch", "name": "Tube Pitch Lab", "emoji": "🎵", "minutes": 25, "cleanup": 1, "noise": 3, "where": ["indoor"], "players": ["solo", "group"], "ages": [8, 11] },
+        { "id": "tube-puppets", "name": "Tube People Puppet Show", "emoji": "🎭", "minutes": 40, "cleanup": 2, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [6, 10] }
+      ]
+    },
+    {
+      "id": "tissue-box",
+      "name": "Tissue Box",
+      "emoji": "🤧",
+      "image": "img/tissue-box.svg",
+      "color": "#E255A1",
+      "tagline": "Empty box, full of fun",
+      "intro": "When the tissues run out… the fun starts! 🎉\n\n🕳️ It already has a **hole** — perfect for feeling, feeding, and tossing.\n🎲 Cube-shaped boxes make dice and robots.\n🧻 Pull out the plastic film first.",
+      "activities": [
+      ]
+    },
+    {
+      "id": "egg-carton",
+      "name": "Egg Carton",
+      "emoji": "🥚",
+      "image": "img/egg-carton.svg",
+      "color": "#C98A00",
+      "tagline": "12 little cups for sorting, growing, playing",
+      "intro": "**12 cups in a row** = a sorting tray, a game board, a garden, a paint palette. 🥚\n\n📦 Cardboard cartons are best for crafts and seeds.\n🧼 Skip cartons with egg goo on them, or wash plastic ones first (raw egg germs!).\n🖐️ Wash hands after.",
+      "activities": [
+      ]
+    },
+    {
+      "id": "cardboard-box",
+      "name": "Cardboard Box",
+      "emoji": "📦",
+      "image": "img/cardboard-box.svg",
+      "color": "#A0703C",
+      "tagline": "The best toy ever invented (seriously)",
+      "intro": "Every kid knows: the **box** is better than what came in it. 📦✨\n\n✂️ Kids cut thin cardboard with scissors. Thick boxes = **grown-up with a box cutter**.\n🎨 Tape, markers, and paint all work.\n🔐 Some activities need grown-up mode.",
+      "activities": [
+      ]
+    },
+    {
+      "id": "clothespins",
+      "name": "Clothespins",
+      "emoji": "🐊",
+      "image": "img/clothespins.svg",
+      "color": "#22A06B",
+      "tagline": "Pinch, clip, CHOMP!",
+      "intro": "A bag of **wooden clothespins** is cheap and builds finger strength for writing ✍️\n\n🤏 Pinching = hand muscles.\n🎨 Paint them, name them, number them.\n⚠️ They pinch! Clip things, not people.",
+      "activities": [
       ]
     }
   ]

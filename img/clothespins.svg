@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">Clothespins holding a drawing and a sock on a line, plus a green clothespin crocodile</title>
+  <defs>
+    <g id="pin">
+      <rect x="-7" y="0" width="6" height="46" rx="2.5"/>
+      <rect x="1" y="0" width="6" height="46" rx="2.5"/>
+      <circle cx="0" cy="18" r="5.5" fill="none" stroke="#94a3b8" stroke-width="3"/>
+    </g>
+  </defs>
+  <ellipse cx="170" cy="222" rx="60" ry="7" fill="#1f2a44" opacity=".1"/>
+  <!-- line -->
+  <path d="M0 52Q120 100 240 52" fill="none" stroke="#64748b" stroke-width="3"/>
+  <!-- drawing -->
+  <g transform="rotate(-4 75 110)">
+    <rect x="42" y="70" width="66" height="74" rx="3" fill="#fff" stroke="#cbd5e1" stroke-width="2.5"/>
+    <circle cx="90" cy="92" r="10" fill="#ffd23f"/>
+    <path d="M50 134q14-26 28 0q10-16 22 0" fill="#86d39b"/>
+    <path d="M56 104l6 6 10-14" fill="none" stroke="#ff5c8a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <use href="#pin" x="52" y="54" fill="#e3b778"/>
+  <use href="#pin" x="100" y="60" fill="#e3b778"/>
+  <!-- sock -->
+  <path d="M146 74h28v48q0 10 10 18q10 10-2 18q-12 6-26-4l-14-12q-6-6-4-16z" fill="#2ba8f5" stroke="#1c7fd4" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M146 86h28M146 98h28M146 110h28" stroke="#fff" stroke-width="5"/>
+  <use href="#pin" x="160" y="60" fill="#22a06b"/>
+  <!-- clothespin crocodile -->
+  <g transform="rotate(-18 170 190)">
+    <path d="M108 196L226 186Q232 192 226 198L112 206Z" fill="#169457" stroke="#0f6b3f" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M108 188L222 160Q230 164 226 172L114 196Z" fill="#22a06b" stroke="#0f6b3f" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M150 186l6 6 6-7 6 6 6-7 6 6 6-7 6 6" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="128" cy="191" r="6" fill="none" stroke="#94a3b8" stroke-width="3"/>
+    <circle cx="200" cy="162" r="9" fill="#22a06b" stroke="#0f6b3f" stroke-width="2.5"/>
+    <circle cx="201" cy="161" r="5" fill="#fff"/><circle cx="202" cy="161" r="2.5" fill="#1f2a44"/>
+  </g>
+</svg>

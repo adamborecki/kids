@@ -53,8 +53,9 @@ def badges(act):
     where = "🏠🌳 In or out" if len(act["where"]) > 1 else SC["where"][act["where"][0]]
     players = "👤👥 Solo or group" if len(act["players"]) > 1 else SC["players"][act["players"][0]]
     lo, hi = act["ages"]
-    return dict(time=f'{SC["timeLabels"][bucket]} · {time}', cleanup=cleanup, noise=SC["noise"][act["noise"]],
-                where=where, players=players, ages=f"🎂 Ages {lo}–{age_text(hi)}")
+    out = dict(time=f'{SC["timeLabels"][bucket]} · {time}', cleanup=cleanup, noise=SC["noise"][act["noise"]],
+               where=where, players=players, ages=f"🎂 Ages {lo}–{age_text(hi)}")
+    return {"grownup": "🔐 Grown-up only", **out} if act.get("grownup") else out
 
 
 def facts_line(act):
