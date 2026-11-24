@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">An open egg carton with eggs and colorful pom-poms in the cups</title>
+  <ellipse cx="120" cy="214" rx="104" ry="8" fill="#1f2a44" opacity=".1"/>
+  <!-- lid -->
+  <path d="M28 100L44 38H196L212 100Z" fill="#d8c6ab" stroke="#8d7556" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60 50v40M90 50v40M120 50v40M150 50v40M180 50v40" stroke="#bfa98a" stroke-width="3" stroke-linecap="round"/>
+  <!-- tray top -->
+  <path d="M16 100H224L232 146H8Z" fill="#cdb796" stroke="#8d7556" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#9c8466">
+    <ellipse cx="38" cy="112" rx="14" ry="6"/><ellipse cx="72" cy="112" rx="14" ry="6"/><ellipse cx="106" cy="112" rx="14" ry="6"/>
+    <ellipse cx="140" cy="112" rx="14" ry="6"/><ellipse cx="174" cy="112" rx="14" ry="6"/><ellipse cx="208" cy="112" rx="14" ry="6"/>
+    <ellipse cx="34" cy="133" rx="15" ry="6.5"/><ellipse cx="70" cy="133" rx="15" ry="6.5"/><ellipse cx="106" cy="133" rx="15" ry="6.5"/>
+    <ellipse cx="142" cy="133" rx="15" ry="6.5"/><ellipse cx="178" cy="133" rx="15" ry="6.5"/><ellipse cx="214" cy="133" rx="15" ry="6.5"/>
+  </g>
+  <!-- eggs (back row) -->
+  <ellipse cx="72" cy="98" rx="12" ry="16" fill="#fff7ec" stroke="#cbb89c" stroke-width="2"/>
+  <ellipse cx="140" cy="98" rx="12" ry="16" fill="#d9a26b" stroke="#a8743f" stroke-width="2"/>
+  <ellipse cx="174" cy="98" rx="12" ry="16" fill="#fff7ec" stroke="#cbb89c" stroke-width="2"/>
+  <ellipse cx="68" cy="92" rx="3" ry="5" fill="#fff" opacity=".8"/>
+  <!-- pom-poms (front row) -->
+  <circle cx="70" cy="126" r="11" fill="#ff5c8a"/><circle cx="66" cy="122" r="3.5" fill="#fff" opacity=".5"/>
+  <circle cx="142" cy="126" r="11" fill="#2ba8f5"/><circle cx="138" cy="122" r="3.5" fill="#fff" opacity=".5"/>
+  <circle cx="214" cy="126" r="11" fill="#ffd23f"/><circle cx="210" cy="122" r="3.5" fill="#fff" opacity=".5"/>
+  <!-- scalloped front -->
+  <path d="M8 146H232L226 186Q213 200 200 186Q187 200 174 186Q161 200 148 186Q135 200 122 186Q109 200 96 186Q83 200 70 186Q57 200 44 186Q31 200 18 186Z" fill="#bfa88a" stroke="#8d7556" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M44 150v30M70 150v30M96 150v30M122 150v30M148 150v30M174 150v30M200 150v30" stroke="#a89172" stroke-width="2.5" opacity=".6"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">An open cardboard box with its flaps up</title>
+  <ellipse cx="122" cy="222" rx="92" ry="8" fill="#1f2a44" opacity=".1"/>
+  <!-- back flaps -->
+  <path d="M38 118L120 78L100 34L18 74Z" fill="#d9a066" stroke="#7a4a1f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M120 78L202 118L222 74L140 34Z" fill="#c78a4e" stroke="#7a4a1f" stroke-width="3" stroke-linejoin="round"/>
+  <!-- inside -->
+  <path d="M38 118L120 78L202 118L120 158Z" fill="#6e4520" stroke="#7a4a1f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M38 118L120 78L202 118L196 121L120 84L44 121Z" fill="#8a5a2b" opacity=".6"/>
+  <!-- faces -->
+  <path d="M38 118L120 158V218L38 178Z" fill="#c8894d" stroke="#7a4a1f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M120 158L202 118V178L120 218Z" fill="#a86d36" stroke="#7a4a1f" stroke-width="3" stroke-linejoin="round"/>
+  <!-- front flaps folded down -->
+  <path d="M38 118L120 158L104 176L24 136Z" fill="#e0ad73" stroke="#7a4a1f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M120 158L202 118L216 136L136 176Z" fill="#b97a40" stroke="#7a4a1f" stroke-width="3" stroke-linejoin="round"/>
+  <!-- tape -->
+  <path d="M152 142L170 133V200L152 209Z" fill="#e9d3a8" opacity=".85"/>
+  <!-- this side up arrows -->
+  <g fill="none" stroke="#5b3714" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 190V166M54 172l8-8 8 8"/><path d="M84 201V177M76 183l8-8 8 8"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#ffd23f">
+    <path d="M200 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+    <path d="M30 30l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"/>
+  </g>
+</svg>

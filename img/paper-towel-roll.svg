@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">Empty paper towel rolls with googly eyes</title>
+  <defs>
+    <linearGradient id="kraft" x1="0" x2="1">
+      <stop offset="0" stop-color="#b8763a"/>
+      <stop offset=".45" stop-color="#e8b27a"/>
+      <stop offset="1" stop-color="#a8692f"/>
+    </linearGradient>
+    <linearGradient id="kraft2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8b27a"/>
+      <stop offset="1" stop-color="#a8692f"/>
+    </linearGradient>
+    <clipPath id="tube"><path d="M85 52V200A35 11 0 0 0 155 200V52Z"/></clipPath>
+  </defs>
+  <ellipse cx="125" cy="222" rx="100" ry="8" fill="#1f2a44" opacity=".1"/>
+  <!-- standing tube -->
+  <path d="M85 52V200A35 11 0 0 0 155 200V52Z" fill="url(#kraft)" stroke="#8a5424" stroke-width="3"/>
+  <g clip-path="url(#tube)" stroke="#9a5f2a" stroke-width="2.5" opacity=".55">
+    <path d="M70 60L170 105M70 110L170 155M70 160L170 205M70 10L170 55"/>
+  </g>
+  <ellipse cx="120" cy="52" rx="35" ry="11" fill="#f0c48f" stroke="#8a5424" stroke-width="3"/>
+  <ellipse cx="120" cy="53" rx="28" ry="7.5" fill="#6e4019"/>
+  <!-- googly eyes + smile -->
+  <circle cx="106" cy="112" r="12" fill="#fff" stroke="#1f2a44" stroke-width="2.5"/>
+  <circle cx="136" cy="112" r="12" fill="#fff" stroke="#1f2a44" stroke-width="2.5"/>
+  <circle cx="109" cy="116" r="5.5" fill="#1f2a44"/>
+  <circle cx="133" cy="116" r="5.5" fill="#1f2a44"/>
+  <path d="M107 140q14 12 28 0" fill="none" stroke="#1f2a44" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="98" cy="138" r="5" fill="#ff8fab" opacity=".7"/>
+  <circle cx="144" cy="138" r="5" fill="#ff8fab" opacity=".7"/>
+  <!-- lying tube -->
+  <path d="M22 178H92A10 18 0 0 1 92 214H22Z" fill="url(#kraft2)" stroke="#8a5424" stroke-width="3"/>
+  <ellipse cx="22" cy="196" rx="10" ry="18" fill="#f0c48f" stroke="#8a5424" stroke-width="3"/>
+  <ellipse cx="22" cy="196" rx="6" ry="13" fill="#6e4019"/>
+  <path d="M40 178L60 214M66 178L86 214" stroke="#9a5f2a" stroke-width="2.5" opacity=".5"/>
+  <!-- sparkles -->
+  <g fill="#ffd23f">
+    <path d="M190 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+    <path d="M200 120l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+    <path d="M45 80l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"/>
+  </g>
+</svg>
