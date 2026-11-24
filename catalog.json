@@ -271,6 +271,31 @@
       "tagline": "Pinch, clip, CHOMP!",
       "intro": "A bag of **wooden clothespins** is cheap and builds finger strength for writing ✍️\n\n🤏 Pinching = hand muscles.\n🎨 Paint them, name them, number them.\n⚠️ They pinch! Clip things, not people.",
       "activities": [
+        { "id": "pin-crocodiles", "name": "Clothespin Crocodiles", "emoji": "🐊", "minutes": 20, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [6, 7] },
+        { "id": "number-wheel", "name": "Clip-the-Answer Wheel", "emoji": "🎡", "minutes": 20, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "pin-airplanes", "name": "Clothespin Airplanes", "emoji": "✈️", "minutes": 20, "cleanup": 2, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "sock-match", "name": "Sock Match Laundry Helper", "emoji": "🧦", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor", "outdoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "art-gallery", "name": "Art Gallery Line", "emoji": "🖼️", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "grip-challenge", "name": "60-Second Clip Challenge", "emoji": "💪", "minutes": 10, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] },
+        { "id": "pin-people", "name": "Clothespin People", "emoji": "👨‍👩‍👧", "minutes": 30, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 9] },
+        { "id": "pin-drop", "name": "Clothespin Drop", "emoji": "🫙", "minutes": 10, "cleanup": 0, "noise": 2, "where": ["indoor"], "players": ["group"], "ages": [6, 11] },
+        { "id": "color-match-clip", "name": "Color Match Clip", "emoji": "🌈", "minutes": 15, "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 7] },
+        { "id": "spelling-strips", "name": "Clip-a-Word Spelling", "emoji": "🔤", "minutes": 15, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 8] },
+        { "id": "clip-clock", "name": "Clip-the-Clock", "emoji": "⏰", "minutes": 20, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 8] },
+        { "id": "pin-magnets", "name": "Fridge Magnet Clips", "emoji": "🧲", "minutes": 15, "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "pin-building", "name": "Clothespin Sculptures", "emoji": "🏗️", "minutes": 25, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [7, 11] },
+        { "id": "pompom-painting", "name": "Pom-Pom Clip Painting", "emoji": "🎨", "minutes": 15, "cleanup": 3, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 7] },
+        { "id": "dont-say-it", "name": "Don't Say It!", "emoji": "🤐", "minutes": 20, "cleanup": 0, "noise": 3, "where": ["indoor"], "players": ["group"], "ages": [7, 11] },
+        { "id": "dino-spikes", "name": "Dino Clip Spikes", "emoji": "🦕", "minutes": 20, "cleanup": 1, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [6, 8] },
+        { "id": "spring-science", "name": "Spring Science", "emoji": "🔬", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [9, 11] },
+        { "id": "pin-catapult", "name": "Clothespin Catapult", "emoji": "🏹", "minutes": 30, "cleanup": 1, "noise": 2, "where": ["indoor"], "players": ["solo", "group"], "ages": [8, 11] },
+        { "id": "pin-wreath", "name": "Clothespin Wreath Frame", "emoji": "🌸", "minutes": 45, "cleanup": 2, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [8, 11], "grownup": true },
+        { "id": "reward-chart", "name": "Clip-Up Goal Chart", "emoji": "📈", "minutes": 20, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [6, 11] },
+        { "id": "story-line", "name": "Clothesline Story", "emoji": "📖", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 9] },
+        { "id": "bag-clips", "name": "Labeled Bag Clips", "emoji": "🛍️", "minutes": 10, "cleanup": 0, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "countdown-line", "name": "Countdown Line", "emoji": "📅", "minutes": 30, "cleanup": 1, "noise": 0, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] },
+        { "id": "memory-pegs", "name": "Memory Peg Game", "emoji": "🧠", "minutes": 20, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["group"], "ages": [6, 9] },
+        { "id": "balance-scale", "name": "Hanger Balance Scale", "emoji": "⚖️", "minutes": 25, "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo"], "ages": [7, 11] }
       ]
     }
   ]

@@ -177,12 +177,43 @@ def reference_doc(paper, path):
     doc.save(str(path))
 
 
+def full_width(tbl, first_col_pct=None):
+    """Stretch a table across the page (worksheets get more writing room)."""
+    tblPr = tbl._tbl.tblPr
+    for old in tblPr.findall(qn("w:tblW")):
+        tblPr.remove(old)
+    w = OxmlElement("w:tblW")
+    w.set(qn("w:type"), "pct")
+    w.set(qn("w:w"), "5000")  # 5000 = 100%
+    tblPr.append(w)
+    grid = tbl._tbl.tblGrid
+    cols = grid.findall(qn("w:gridCol"))
+    if cols:
+        page = 10000  # twentieths of a point; only the ratio matters with pct width
+        widths = [page // len(cols)] * len(cols)
+        if first_col_pct and len(cols) == 2:
+            widths = [page * first_col_pct // 100, page * (100 - first_col_pct) // 100]
+        for col, wd in zip(cols, widths):
+            col.set(qn("w:w"), str(wd))
+        for row in tbl.rows:
+            for cell, wd in zip(row.cells, widths):
+                tcPr = cell._tc.get_or_add_tcPr()
+                for old in tcPr.findall(qn("w:tcW")):
+                    tcPr.remove(old)
+                tcW = OxmlElement("w:tcW")
+                tcW.set(qn("w:type"), "pct")
+                tcW.set(qn("w:w"), str(5000 * wd // page))
+                tcPr.insert(0, tcW)
+
+
 def finish(path):
     doc = Document(str(path))
     for tbl in doc.tables:
         set_borders(tbl)
         for cell in tbl.rows[0].cells:
             shade(cell)
+        header = [c.text.strip() for c in tbl.rows[0].cells]
+        full_width(tbl, 30 if header == ["Activity", "Badges"] else None)
     first_h1 = True
     for para in list(doc.paragraphs):
         text = para.text.strip()
