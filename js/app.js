@@ -9,13 +9,12 @@
   const app = document.getElementById("app");
   const pageSize = document.getElementById("page-size");
   const ageSelect = document.getElementById("age");
-  const grownBtn = document.getElementById("grownup");
-  const gate = document.getElementById("gate");
-  const KEYS = { paper: "funDrawer.paper", filters: "funDrawer.filters", panel: "funDrawer.panelOpen", grownup: "funDrawer.grownup" };
+  const KEYS = { paper: "funDrawer.paper", filters: "funDrawer.filters", panel: "funDrawer.panelOpen" };
   let catalog = null;
   let S = null;            // catalog.scales
   let FACETS = [];
   let onAge = null;        // current view's handler for an age change
+  let routeId = 0;         // bumps on every navigation, so a slow fetch can't overwrite a newer page
 
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },
@@ -46,56 +45,11 @@
     ages: `🎂 Ages ${ageRange(a)}`,
   });
 
-  const badges = (a) => (a.grownup ? `<span class="badge b-grownup">🔐 Grown-up</span>` : "") +
+  const badges = (a) => (a.grownup ? `<span class="badge b-grownup" title="Needs a grown-up: box cutter, hot glue, heat, dye, or a big mess">🧑‍🔧 Grown-up help</span>` : "") +
     Object.entries(labels(a)).map(([k, v]) => {
       const level = k === "noise" ? ` n${a.noise}` : k === "cleanup" ? ` c${a.cleanup}` : "";
       return `<span class="badge b-${k}${level}">${v}</span>`;
     }).join("");
-
-  /* ---------- Grown-up mode ----------
-     Activities marked "grownup" (box cutters, hot glue, heat, dye, big messes) stay hidden
-     until a grown-up answers a quick math question. A speed bump for kids, not security. */
-  let grownup = store.get(KEYS.grownup) === "1";
-  const visible = (a) => grownup || !a.grownup;
-
-  function paintGrownBtn() {
-    grownBtn.setAttribute("aria-pressed", String(grownup));
-    grownBtn.innerHTML = grownup ? `🔓<span class="gl"> Grown-up</span>` : `🔒<span class="gl"> Kid mode</span>`;
-    grownBtn.title = grownup ? "Grown-up mode is on. Tap to lock." : "Tap to unlock grown-up activities.";
-  }
-  function setGrownup(on) {
-    grownup = on;
-    store.set(KEYS.grownup, on ? "1" : "0");
-    paintGrownBtn();
-    const y = window.scrollY;
-    route();
-    requestAnimationFrame(() => window.scrollTo(0, y));
-  }
-  function askGrownup() {
-    const a = 12 + Math.floor(Math.random() * 8), b = 12 + Math.floor(Math.random() * 8);
-    gate.querySelector(".gate-q").textContent = `${a} × ${b} = ?`;
-    const input = gate.querySelector("input");
-    input.value = "";
-    gate.querySelector(".gate-msg").textContent = "";
-    gate.dataset.answer = String(a * b);
-    if (!gate.open) gate.showModal();
-    input.focus();
-  }
-  gate.querySelector("form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (e.submitter && e.submitter.value === "cancel") { gate.close(); return; }
-    if (gate.querySelector("input").value.trim() === gate.dataset.answer) {
-      gate.close();
-      setGrownup(true);
-    } else {
-      gate.querySelector(".gate-msg").textContent = "Not quite — here's a new one.";
-      const q = gate.querySelector(".gate-q");
-      q.classList.remove("shake"); void q.offsetWidth; q.classList.add("shake");
-      setTimeout(askGrownup, 600);
-    }
-  });
-  grownBtn.addEventListener("click", () => (grownup ? setGrownup(false) : askGrownup()));
-  document.addEventListener("click", (e) => { if (e.target.closest("[data-unlock]")) askGrownup(); });
 
   /* ---------- Filters ---------- */
   function buildFacets() {
@@ -122,6 +76,9 @@
       { key: "players", label: "👥 Players",
         options: Object.entries(S.players).map(([id, label]) => ({ id, label })),
         test: (a, v) => a.players.includes(v) },
+      { key: "help", label: "🧑‍🔧 Help",
+        options: [{ id: "kids", label: "🧒 Kids can lead" }, { id: "grownup", label: "🧑‍🔧 Grown-up help" }],
+        test: (a, v) => (v === "grownup") === !!a.grownup },
     ];
   }
 
@@ -248,11 +205,7 @@
     `<a class="btn" data-docx="${esc(name)}" href="${docx(paper(), name)}" download>📄 <span>${label} (<span class="paper-name">${paper() === "a4" ? "A4" : "Letter"}</span>)</span></a>`;
 
   /* ---------- Views ---------- */
-  const allPool = () => catalog.categories.flatMap((cat) => cat.activities.filter(visible).map((a) => ({ cat, a })));
-  const lockedNote = (acts) => {
-    const n = grownup ? 0 : acts.filter((a) => a.grownup).length;
-    return n ? `<p class="locked-note">🔐 ${n} more ${n === 1 ? "activity needs" : "activities need"} a grown-up. <button type="button" class="link" data-unlock>Grown-up? Unlock</button></p>` : "";
-  };
+  const allPool = () => catalog.categories.flatMap((cat) => cat.activities.map((a) => ({ cat, a })));
 
   function renderHome() {
     document.title = "The Fun Drawer";
@@ -267,13 +220,12 @@
             <img src="${c.image}" alt="" width="220" height="220">
             <h2>${c.emoji} ${esc(c.name)}</h2>
             <p>${esc(c.tagline)}</p>
-            <span class="pill">${c.activities.filter(visible).length} activities ▶</span>
+            <span class="pill">${c.activities.length} activities ▶</span>
           </a>`).join("")}
       </div>
       <h2 class="find-head">🔎 Or find the perfect activity</h2>
       <div class="filters-slot"></div>
       <div class="act-list"></div>
-      ${lockedNote(catalog.categories.flatMap((c) => c.activities))}
       <div class="bundle">
         <p>🖨️ Want it all on paper?</p>
         ${paperToggle()}
@@ -299,30 +251,15 @@
       </header>
       <div class="filters-slot"></div>
       <div class="act-list"></div>
-      ${lockedNote(cat.activities)}
       <p class="actions" style="margin-top:18px">${paperToggle()} ${wordLink(cat.id + "--all", "Print all " + cat.name)}</p>`;
     const list = app.querySelector(".act-list");
-    onAge = filterPanel(app.querySelector(".filters-slot"), cat.activities.filter(visible).map((a) => ({ cat, a })),
+    onAge = filterPanel(app.querySelector(".filters-slot"), cat.activities.map((a) => ({ cat, a })),
       (hits) => { list.innerHTML = hits.length ? hits.map((p) => card(p, false)).join("") : emptyMsg; });
     setPaper(paper());
   }
 
-  function renderLocked(cat, act) {
-    document.title = `${act.name} · The Fun Drawer`;
-    app.style.setProperty("--c", cat.color);
-    app.innerHTML = `
-      <nav class="crumbs"><a href="#/">🏠 Home</a> › <a href="#/${cat.id}">${cat.emoji} ${esc(cat.name)}</a> › ${esc(act.name)}</nav>
-      <section class="locked">
-        <div class="locked-ico" aria-hidden="true">🔐</div>
-        <h1>${act.emoji} ${esc(act.name)}</h1>
-        <p>This one needs a <b>grown-up</b> to help. 🧑‍🔧</p>
-        <p><button type="button" class="btn primary" data-unlock>🔓 Grown-up unlock</button></p>
-        <p><a href="#/${cat.id}">◀ Pick a different ${esc(cat.name)} activity</a></p>
-      </section>`;
-  }
-
   async function renderActivity(cat, act) {
-    if (!visible(act)) { renderLocked(cat, act); return; }
+    const myRoute = routeId;
     document.title = `${act.name} · The Fun Drawer`;
     app.style.setProperty("--c", cat.color);
     app.innerHTML = `<p class="loading">Opening the folder… 📂</p>`;
@@ -333,9 +270,10 @@
       if (!res.ok) throw new Error(res.status);
       text = await res.text();
     } catch {
-      app.innerHTML = `<p class="error">😬 Couldn't open this folder. <a href="#/${cat.id}">Go back</a></p>`;
+      if (myRoute === routeId) app.innerHTML = `<p class="error">😬 Couldn't open this folder. <a href="#/${cat.id}">Go back</a></p>`;
       return;
     }
+    if (myRoute !== routeId) return; // the user already moved on
 
     // Split the markdown: before first ## = intro, each ## = one "file" in the folder.
     const tmp = document.createElement("div");
@@ -423,7 +361,7 @@
       const picker = document.createElement("div");
       picker.className = "age-picker";
       picker.innerHTML = `<span>🎂 Age:</span>` +
-        S.ages.map((n) => `<button type="button" class="chip" data-age="${n}">${ageText(n)}</button>`).join("") +
+        blocks.map((b) => `<button type="button" class="chip" data-age="${b.dataset.age}">${ageText(+b.dataset.age)}</button>`).join("") +
         `<button type="button" class="chip" data-age="">All</button>`;
       ageSec.el.querySelector("h2").after(picker);
       picker.addEventListener("click", (e) => {
@@ -431,12 +369,19 @@
         if (b) setAge(b.dataset.age);
       });
 
+      const note = document.createElement("p");
+      note.className = "age-note";
+      picker.after(note);
+
       applyAge = () => {
         const a = age();
-        ageSec.el.classList.toggle("ages-filtered", !!a);
+        const has = blocks.some((b) => b.dataset.age === a);
+        ageSec.el.classList.toggle("ages-filtered", has);
         blocks.forEach((b) => b.classList.toggle("mine", b.dataset.age === a));
         picker.querySelectorAll("[data-age]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.age === a)));
-        ageSec.tab.querySelector(".tl").textContent = a ? `Age ${ageText(+a)}` : ageSec.label;
+        ageSec.tab.querySelector(".tl").textContent = has ? `Age ${ageText(+a)}` : ageSec.label;
+        note.textContent = a && !has ? `🎂 This one is made for ages ${ageRange(act)}, so here are all its levels.` : "";
+        note.hidden = !note.textContent;
       };
       applyAge();
     }
@@ -464,7 +409,7 @@
       [...tabs.children].forEach((t, j) => {
         const on = i < 0 ? j === sections.length : j === i;
         t.setAttribute("aria-selected", String(on));
-        if (on) t.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        if (on) tabs.scrollTo({ left: t.offsetLeft - (tabs.clientWidth - t.offsetWidth) / 2, behavior: "smooth" });
       });
     }
 
@@ -492,6 +437,7 @@
     const [cId, aId] = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
     app.style.removeProperty("--c");
     onAge = null;
+    routeId++;
     const cat = catalog.categories.find((c) => c.id === cId);
     const act = cat && cat.activities.find((a) => a.id === aId);
     if (act) renderActivity(cat, act);
@@ -510,7 +456,6 @@
       return;
     }
     S = catalog.scales;
-    paintGrownBtn();
     buildFacets();
     loadFilters();
     ageSelect.innerHTML = `<option value="">Any</option>` +

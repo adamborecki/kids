@@ -135,29 +135,8 @@ main { max-width: 980px; margin: 0 auto; padding: 8px 16px 40px; outline: none; 
 .meta span { white-space: nowrap; }
 .empty { color: var(--ink-soft); text-align: center; padding: 20px; }
 
-/* ----- Grown-up mode ----- */
 .top-tools { display: flex; align-items: center; gap: 8px; }
-.grown-btn {
-  border: 2px solid var(--ink); background: var(--card); border-radius: 12px; cursor: pointer;
-  padding: 4px 10px; font: 700 .95rem var(--head); white-space: nowrap;
-}
-.grown-btn[aria-pressed="true"] { background: #FFE08A; border-color: #B7791F; }
-.gate { border: 3px solid var(--ink); border-radius: var(--radius); padding: 18px 20px; max-width: 360px; width: calc(100% - 32px); background: var(--card); color: var(--ink); }
-.gate::backdrop { background: rgba(31, 42, 68, .45); }
-.gate h2 { margin: 0 0 6px; }
-.gate p { margin: .4em 0; font-size: .95rem; }
-.gate .gate-q { font: 700 2rem var(--head); text-align: center; margin: 12px 0 8px; }
-.gate input { width: 100%; font: 700 1.5rem var(--head); text-align: center; padding: 8px; border: 2px solid var(--line); border-radius: 12px; }
-.gate .gate-msg { color: #D9342B; min-height: 1.3em; text-align: center; }
-.gate-actions { display: flex; justify-content: space-between; gap: 10px; margin-top: 8px; }
-.shake { animation: shake .35s; }
-@keyframes shake { 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
 .badge.b-grownup { background: #FFE08A; color: #6B4600; }
-.locked-note { text-align: center; color: var(--ink-soft); margin: 18px 0; }
-.link { border: 0; background: none; padding: 0; cursor: pointer; font: inherit; font-weight: 700; color: var(--ink); text-decoration: underline; }
-.locked { text-align: center; background: var(--card); border: 3px dashed var(--c); border-radius: var(--radius); padding: 26px 18px; margin: 18px 0; }
-.locked-ico { font-size: 64px; line-height: 1; }
-.locked h1 { margin: 10px 0 6px; }
 
 /* ----- Badges ----- */
 .badges { display: flex; flex-wrap: wrap; gap: 5px; }
@@ -207,6 +186,7 @@ main { max-width: 980px; margin: 0 auto; padding: 8px 16px 40px; outline: none; 
 /* ----- By Age ----- */
 .age-picker { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 6px 0 10px; font: 600 1rem var(--head); }
 .age-picker .chip { min-width: 46px; }
+.age-note { color: var(--ink-soft); font-size: .95rem; margin: 0 0 8px; }
 .age-block { border-radius: 16px; padding: 2px 14px 8px; margin: 8px 0; border: 2px solid transparent; }
 .ages-filtered .age-block:not(.mine) { display: none; }
 .age-block.mine { border-color: var(--c); background: color-mix(in srgb, var(--c) 7%, #fff); }
@@ -316,7 +296,7 @@ table.grid-table th, table.grid-table td { width: 2.2em; height: 2.2em; padding:
   body { font-size: 18px; }
   h1 { font-size: 1.75rem; }
   .brand { font-size: 1.05rem; }
-  .gl, .al { display: none; }
+  .al { display: none; }
   .top-tools { gap: 6px; }
   .cat-head { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 12px 14px; gap: 4px; }
   .cat-head img { width: 110px; height: 110px; }

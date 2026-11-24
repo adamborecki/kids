@@ -55,7 +55,7 @@ def badges(act):
     lo, hi = act["ages"]
     out = dict(time=f'{SC["timeLabels"][bucket]} · {time}', cleanup=cleanup, noise=SC["noise"][act["noise"]],
                where=where, players=players, ages=f"🎂 Ages {lo}–{age_text(hi)}")
-    return {"grownup": "🔐 Grown-up only", **out} if act.get("grownup") else out
+    return {"grownup": "🧑‍🔧 Grown-up help", **out} if act.get("grownup") else out
 
 
 def facts_line(act):
