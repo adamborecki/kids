@@ -15,10 +15,9 @@ Picture-first activities for kids, built from stuff in the kitchen drawer:
 
 **200 activities** in all. The full list lives in `catalog.json`.
 
-## 🔐 Grown-up mode
+## 🧑‍🔧 Grown-up help
 Activities that need a box cutter, hot glue, heat, dye, or make a big mess have `"grownup": true` in `catalog.json`.
-They're hidden until a grown-up taps 🔒 in the top bar and answers a quick math question (e.g. 14 × 17).
-It's a speed bump for kids, not real security. Tap 🔓 again to lock.
+They show a yellow **🧑‍🔧 Grown-up help** badge, and the 🧑‍🔧 Help filter can show only "Kids can lead" activities.
 
 ## 🏷️ Badges + 🔎 filters
 Every activity card shows badges. The home page and each category page have a filter panel (live counts on every chip; filters are remembered).
@@ -31,6 +30,7 @@ Every activity card shows badges. The home page and each category page have a fi
 | 🧽 Cleanup | ✨ None · 🧻 Light `$` · 🧽 Medium `$$` · 🛁 Big `$$$` |
 | 🔊 Noise | 🤫 Silent · 🔉 Quiet · 🔊 Not as quiet · 📢 Unusually loud |
 | 👥 Players | 👤 Solo · 👥 Group |
+| 🧑‍🔧 Help | 🧒 Kids can lead · 🧑‍🔧 Grown-up help |
 
 Groups combine with AND; options inside a group combine with OR (Indoor + Outdoor = either).
 
@@ -62,7 +62,7 @@ No build step. `.nojekyll` is included so the `.md` files are served as-is.
    { "id": "my-thing", "name": "My Thing", "emoji": "🎈", "minutes": 20,
      "cleanup": 0, "noise": 1, "where": ["indoor"], "players": ["solo", "group"], "ages": [6, 11] }
    ```
-   `cleanup` and `noise` are 0–3 (see `scales` at the top of the file). `ages: [6, 11]` means 6 to 11+. Add `"grownup": true` to hide it behind grown-up mode.
+   `cleanup` and `noise` are 0–3 (see `scales` at the top of the file). `ages: [6, 11]` means 6 to 11+. Add `"grownup": true` for the 🧑‍🔧 Grown-up help badge.
 3. Rebuild Word files: `python3 tools/build_docx.py` (needs `pandoc` + `python-docx`)
 
 Preview locally: `python3 -m http.server` → http://localhost:8000
